@@ -1,0 +1,45 @@
+{% import "macro/form.html" as form %}
+<form action="/payment" type="post" class="details" method="get">
+	<fieldset>
+		<div class="legend">
+			<legend>Your details</legend>
+		</div>
+		{{ form.input("title", "Title", maxlength = 10) }}
+		{{ form.input("first_name", "First name", maxlength = 10) }}
+		{{ form.input("last_name", "Last name", maxlength = 10) }}
+		{{ form.input("email", "Email", maxlength = 10, notice_class = 'error') }}
+		{{ form.input("telephone", "Phone no.", maxlength = 10) }}
+	</fieldset>
+
+	<fieldset class="cf">
+		<div class="legend">
+			<legend>Your address</legend>
+		</div>
+		{{ form.input("address1", "Address", maxlength = 10, notice_class = 'error') }}
+		{{ form.input("address2", "", maxlength = 10) }}
+		{{ form.input("city", "City / Town", maxlength = 10) }}
+		{{ form.input("county", "County", maxlength = 10) }}
+		{{ form.select("country", "Country", [{ 'label': 'United Kingdom', 'value': 'united-kingdom' }]) }}
+		{{ form.input("postcode", "Title", maxlength = 10) }}
+	</fieldset>
+
+	{% if method == 'delivery' %}
+	<fieldset class="cf">
+		<div class="legend">
+			<legend>Delivery instructions</legend>
+		</div>
+		<div class="field">
+			<div class="field-label">
+				<p>In order for us to deliver your papers, please provide us with some information about your property and any specific details on where you want the paper delivered. The more information you give us, the easier delivery will be.</p>
+				<p>For example "End of terrace house, green door, post through letterbox". Please note that our couriers can not deliver above ground floor so for flats, please let us know where to leave the paper on the ground floor.</p>
+			</div>
+		
+			<div class="field-inputs">
+				<textarea></textarea>
+			</div>
+		</div>
+	</fieldset>
+	{% endif %}
+	
+	{{ form.submit() }}
+</form>

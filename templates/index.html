@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Choose your subscription type{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-12">
+		<div class="hero cf">
+			<h1><img src="static/img/hero.png" width="940" height="320" alt="iPad &#38; iPhone access included when you subscribe to the Guardian or Observer" /></h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<h2>Choose a package that is right for you</h2>
+	</div>
+</div>
+
+<div class="row offers">
+	<div class="col-6">
+		<div class="offer-panel">
+			<h2 class="offer-heading large">Voucher subscription</h2>
+			<div class="offer-star">Includes iPad<span class="break"></span> and iPhone access</div>
+			<div class="offer-image cf"><img src="/static/img/print-digital.jpg" width="380" height="142" alt="" /></div>
+			<div class="offer-description">Save up to 38% on the retail price<span class="triangle"></span></div>
+			<div class="offer-content">
+				<ul>
+					<li>Subscribe and we will send you a book of vouchers</li>
+					<li>Pick up the paper from your local news retailer (delivery not included)</li>
+				</ul>
+			</div>
+			<div class="offer-cta">
+				<a href="/voucher" class="button">Subscribe</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-6">
+		<div class="offer-panel">
+			<h2 class="offer-heading large">Home delivery</h2>
+			<div class="offer-star">Includes iPad<span class="break"></span> and iPhone access</div>
+			<div class="offer-image cf"><img src="/static/img/home-delivery.jpg" width="380" height="142" alt="" /></div>
+			<div class="offer-description">Delivery available within the M25 only<span class="triangle"></span></div>
+			<div class="offer-content">
+				<ul>
+					<li>You pay the cover price, We will deliver for free each morning by 7am</li>
+					<li>Free delivery only available within the M25</li>
+				</ul>
+			</div>
+			<div class="offer-cta">
+				<a href="/delivery" class="button">Subscribe</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6">
+		<div class="offer-panel">
+			<h2 class="offer-heading">Tablet editions</h2>
+			<div class="offer-image cf">
+				<img src="/static/img/tablet.jpg" width="190" height="138" alt="" />
+				<p>iPad or Kindle &#163;9.99 monthly includes a 14 day free trail</p>
+			</div>
+			<div class="offer-cta">
+				<a href="http://itunes.apple.com/gb/app/guardian-ipad-edition/id452707806" class="button">iPad</a>
+				<a href="http://www.amazon.co.uk/The-Guardian-and-the-Observer/dp/B004MME3M8/" class="button">Kindle</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-6">
+		<div class="offer-panel">
+			<h2 class="offer-heading">Mobile app</h2>
+			<div class="offer-image cf">
+				<img src="/static/img/mobile.jpg" width="190" height="138" alt="" />
+				<p>iPhone 99p monthly</p>
+				<p>Android free</p>
+			</div>
+			<div class="offer-cta">
+				<a href="http://itunes.apple.com/gb/app/the-guardian/id409128287" class="button">iPhone</a>
+				<a href="https://play.google.com/store/apps/details?id=com.guardian&hl=en" class="button">Android</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

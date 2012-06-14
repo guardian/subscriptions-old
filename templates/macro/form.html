@@ -1,0 +1,29 @@
+{% macro input(name, label, value = "", type = "text", maxlength = 50, notice_class = 'notice') -%}
+<div class="field">
+	<label for="{{ name }}" class="field-label">{{ label }}</label>
+	<div class="field-inputs">
+		<input type="{{ type }}" name="{{ name }}" id="{{ name }}" maxlength="10" value=""  />
+		<em class="inline-message {{ notice_class }}">{{ notice_class }} about this field</em>
+	</div>
+</div>
+{%- endmacro %}
+
+{% macro select(name, label, options = []) -%}
+<div class="field">
+	<label for="{{ name }}" class="field-label">{{ label }}</label>
+
+	<div class="field-inputs">
+		<select name="{{ name }}" id="{{ name }}">
+			{% for option in options %}
+			<option value="{{ option.value }}">{{ option.label }}</option>
+			{% endfor %}
+		</select>
+	</div>
+</div>
+{%- endmacro %}
+
+{% macro submit(text = "Submit") -%}
+<div class="field">
+	<button type="submit">{{ text }}</button>
+</div>
+{%- endmacro %}

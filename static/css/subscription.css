@@ -1,0 +1,300 @@
+/* sundries */
+
+.global-header {
+	border-top: 1px solid #bebebe;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.global-header img {
+	margin-right: 10px;
+}
+
+.hero {
+	border-bottom: 4px solid #ededed;
+}
+
+.hero img {
+	float: left;
+}
+
+.row {
+	margin-bottom: 10px;
+}
+
+/* main offer panels */
+.offers {
+	margin-top: 50px;
+}
+
+.offer-panel {
+	background: #f8f8f8;
+	box-shadow: 0 0 10px #ccc;
+	font-family: Georgia;
+	font-size: 14px;
+	margin: 0 100px 25px 50px;
+	position: relative;
+}
+
+.col-6:first-child .offer-panel {
+	margin: 0 50px 25px 100px;
+}
+
+.offer-heading {
+	background: #005689;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.offer-star {
+	background: url(../img/star.png) no-repeat;
+	color: #fff;
+	height: 62px;
+	font-weight: bold;
+	padding: 35px 20px;
+	position: absolute;
+	right: -50px;
+	text-align: center;
+	top: -30px;
+	width: 92px;
+	z-index: 2;
+}
+
+.offer-image {
+	background: #ededed;
+	overflow: hidden;
+}
+
+.offer-image img {
+	float: left;
+	max-width: 380px;	
+}
+
+.offer-image p {
+	font-size: 16px;
+	line-height: 1.2;
+	margin: 15px 10px 0 205px;
+}
+
+.offer-description {
+	background: #ccc;
+	color: #000;
+	margin-bottom: 25px;
+	padding: 15px 0;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+}
+
+.offer-description .triangle {
+	border-left: 155px solid transparent;
+	border-right: 155px solid transparent;
+	border-top: 15px solid #ccc;
+	bottom: -15px;
+	height: 0;
+	left: 0;
+	position: absolute;
+	width: 0;
+}
+
+.offer-content {
+	padding: 15px;
+}
+
+.offer-content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.offer-content ul li {
+	background: url(../img/list-item.gif) left no-repeat;
+	list-style: none;
+	margin: 25px 0 0 0;
+	min-height: 30px;
+	padding: 0 0 0 45px;
+}
+
+.offer-content ul li:first-child {
+	margin-top: 0;
+}
+
+.offer-cta {
+	margin: 15px auto 0 auto;
+	padding-bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+.offer-cta .button + .button {
+	margin-left: 15px;
+}
+
+.break {
+	display: block;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	background: #fafafa;
+}
+
+.breadcrumb .items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumb .item {
+	background: #e0ecf4;
+	float: left;
+	line-height: 40px;
+	list-style: none;
+	padding-left: 30px;
+	position: relative;
+}
+
+.breadcrumb .item a {
+	color: #fff;
+}
+
+.breadcrumb .item:first-child {
+	padding-left: 10px;
+}
+
+.breadcrumb .item b,
+.breadcrumb .item i {
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #e0ecf4;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	left: 100%;
+	z-index: 3;
+}
+
+.breadcrumb .item i {
+	border-left-color: #fff;
+	margin-left: 3px;
+	z-index: 2;
+}
+
+.breadcrumb .active,
+.breadcrumb .complete {
+	background: #005689;
+	color: #fff;
+}
+
+.breadcrumb .item.active b,
+.breadcrumb .item.complete b {
+	border-left-color: #005689;
+}
+
+/* how it works */
+.how-it-works {
+	font-size: 14px;
+}
+
+.how-it-works .steps {
+	list-style: none;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.how-it-works .steps .step {
+	background: #e0ecf4;
+	float: left;
+	list-style: none;
+	margin: 0 20px 0 0;
+	min-height: 220px;
+	padding: 0;
+	position: relative;
+	width: 215px;
+}
+
+.how-it-works .steps .step:first-child {
+	padding-left: 0;
+}
+
+.how-it-works .steps .step .arrow {
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 110px solid transparent;
+	border-bottom: 110px solid transparent;
+	border-left: 20px solid #e0ecf4;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 2;
+}
+
+.how-it-works .steps .step p {
+	margin: 10px;
+	padding: 0;
+}
+
+.how-it-works .find-out-more {
+	margin-top: 5px;
+}
+
+.how-it-works .in-m25 {
+	margin-right: 20px;
+}
+
+/* bundle selector */
+.choose-a-bundle {
+	position: relative;
+}
+
+.choose-a-bundle .offer-star {
+	font-family: Georgia;
+	font-size: 14px;
+	right: 5px;
+	top: 70px;
+}
+
+.bundle-selector .field {
+	float: left;
+	width: 100%;
+}
+
+.bundle-selector input[type="radio"] {
+	float: left;
+}
+
+.bundle-selector label {
+	float: right;
+	width: 440px;
+}
+
+.bundle-selector label span {
+	color: #0061a6;
+	display: block;
+	margin-top: 4px;
+}
+
+/* forms */
+.details .legend {
+	display: block;
+	font-family: Georgia, serif;
+	font-size: 18px;
+	margin: 20px 0 10px 0;
+}
+
+.details .field-inputs {
+	width: auto;
+}
+
+.button-links a {
+	clear: both;
+	margin: 10px 20px 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	width: 215px;
+}

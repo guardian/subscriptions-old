@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}{% endblock %} | Subscriptions | The Guardian </title>
+
+		<link rel="stylesheet" href="http://gnm41087.int.gnl:3000/css/core.pasteup.css" />
+		<link rel="stylesheet" href="http://gnm41087.int.gnl:3000/css/layout.pasteup.css" />
+		<link rel="stylesheet" href="/static/css/subscription.css" />
+		<link rel="shortcut icon" href="http://static.guim.co.uk/favicon.ico" type="image/x-icon" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="row">
+				<div class="col-12">
+					<div class="global-header">
+						<img src="http://static.guim.co.uk/static/66dabfb7d92e18e493e1456ad1e90731c92575e7/common/images/logos/the-guardian/comment.gif" width="" height="" alt="the Guardian" title="the Guardian" />
+						<img src="http://static.guim.co.uk/static/fabeacce9e16d9675aa2a0f38c3bcd552a865839/zones/news/images/logo_observer.gif" width="" height="" alt="the Guardian" title="the Guardian" />
+					</div>
+				</div>
+			</div>
+			{% block content %}{% endblock %}
+			<div class="footer zone-border zone-border-medium">
+				{% if method == 'delivery' %}
+
+				{% else %}
+					<p>For help with Guardian and Observer subscription services please call 0845 1204733. Open 9am to 5pm, Monday to Friday, calls charged at local rate.</p>
+					<p>You may also find help in our <a href="#faqs">Frequently Asked Questions</a>.</p>
+				{% endif %}
+			</div>
+		</div>
+	</body>
+</html>

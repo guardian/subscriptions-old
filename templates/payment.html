@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Choose your bundle{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-12">
+		<div class="breadcrumb cf">
+			<ul class="items">
+				<li class="item complete"><a href="/"><i></i>Choose a package<b></b></a></li>
+				<li class="item complete"><a href="/details"><i></i>Your details<b></b></a></li>
+				<li class="item"><i></i>Choose payment<b></b></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<h2>Payment method</h2>
+		<p>7 day Guardian and Observer. Save 38%. iPad and iPhone access included. <a href="/">Change</a></p>
+	</div>
+</div>
+
+<div class="row">
+	<form action="/thanks">
+		<button type="submit">Continue</button>
+	</form>
+</div>
+{% endblock %}

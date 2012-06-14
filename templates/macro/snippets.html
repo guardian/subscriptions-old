@@ -1,0 +1,62 @@
+{% macro bundle_selector(with_saving = True) -%}
+<div class="col-6">
+	<div class="choose-a-bundle">
+		<img src="/static/img/choose-package.png" width="380" height="136" />
+		{% if with_saving %}
+			<div class="offer-star">Prices valid for first 3 months only</div>
+		{% endif %}
+	</div>
+</div>
+
+<div class="col-6">
+	<form action="/details" class="bundle-selector">
+		<fieldset>
+			
+			<div class="field">
+				<input type="radio" name="bundle" id="bundle-7-day" value="7-day" />
+				<label for="bundle-7-day">
+					7 day Guardian and Observer
+					<span>
+						{% if with_saving %}Save 38%. {% endif %}
+						iPad and iPhone access included. &#163;8.XX per week
+					</span>
+				</label>
+			</div>
+
+			<div class="field">
+				<input type="radio" name="bundle" id="bundle-6-day" value="6-day" />
+				<label for="bundle-6-day">
+					6 day Guardian Monday - Saturday
+					<span>
+						{% if with_saving %}Save 34%. {% endif %}
+						iPad and iPhone access included. &#163;7.XX per week</span>
+				</label>
+			</div>
+
+			<div class="field">
+				<input type="radio" name="bundle" id="bundle-saturday" value="saturday" />
+				<label for="bundle-saturday">
+					Saturday Guardian and Observer only
+					<span>
+						{% if with_saving %}Save 27%. {% endif %}
+						iPad and iPhone access included. &#163;5.XX per week
+					</span>
+				</label>
+			</div>
+
+			<div class="field">
+				<input type="radio" name="bundle" id="bundle-sunday" value="sunday" />
+				<label for="bundle-sunday">
+					Sunday Observer only
+					<span>
+						{% if with_saving %}Save 14%. {% endif %}
+						iPad and iPhone access included. &#163;4.XX per week
+					</span>
+				</label>
+			</div>
+
+			<div class="field cf"><button class="button" type="submit">Continue</button></div>
+		</fieldset>
+	</form>
+</div>
+{%- endmacro %}
