@@ -12,6 +12,13 @@ class Index(webapp2.RequestHandler):
         template = jinja_environment.get_template(r + '.html')
         self.response.out.write(template.render(method = method))
 
+class Promo(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('promo.html')
+        self.response.out.write(template.render())
+
+
 app = webapp2.WSGIApplication([
+	('/promo', Promo),
     ('/(.*)', Index)
 ], debug=True)

@@ -36,6 +36,10 @@
 	position: relative;
 }
 
+.offer-panel button {
+	font-family: Georgia;
+}
+
 .col-6:first-child .offer-panel {
 	margin: 0 50px 25px 100px;
 }
