@@ -26,8 +26,8 @@
 	<div class="col-12">
 		<h2>What happens next?</h2>
 		<div class="margin-top">
-			{% if delivery == 'delivery' %}
-				{{ repeaters.howitworks(['courier', 'apps', 'deliver', 'help']) }}
+			{% if method == 'delivery' %}
+				{{ repeaters.howitworks(['deliver', 'apps', 'help']) }}
 			{% else %}
 				{{ repeaters.howitworks(['courier', 'apps', 'help']) }}
 			{% endif %}
