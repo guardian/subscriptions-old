@@ -8,6 +8,8 @@
 		{{ form.input("first_name", "First name", maxlength = 10) }}
 		{{ form.input("last_name", "Last name", maxlength = 10) }}
 		{{ form.input("email", "Email", maxlength = 10, notice_class = 'error') }}
+		{{ form.checkbox("allow_email", "I'd like to be kept up to date by email with offers and developments from Guardian News &amp; Meda Limited") }}
+		{{ form.checkbox("allow_post", "I'd like to be kept up to date by post with offers and developments from Guardian News &amp; Meda Limited")}}
 		{{ form.input("telephone", "Phone no.", maxlength = 10) }}
 	</fieldset>
 
@@ -21,6 +23,22 @@
 		{{ form.input("county", "County", maxlength = 10) }}
 		{{ form.select("country", "Country", [{ 'label': 'United Kingdom', 'value': 'united-kingdom' }]) }}
 		{{ form.input("postcode", "Title", maxlength = 10) }}
+	</fieldset>
+
+	<fieldset class="cf">
+		<div class="legend">
+			<legend>Delivery address</legend>
+		</div>
+		{{ form.postcode_checker("postcode_check", notice_class="error",  notice_message="Delivery postcode is required") }}
+		{{ form.description("If your exact address is not shown in the list below please call out customer services team on 0845 366 0070 who will be able to assist in the setup of your subscription") }}
+		{{ form.select("addresses", "", options=[{"label": "Rockwood House, 9-17 Perrymount Rd, Hayward Heath RH16 3DH", "value": "1"}, {"label": "King's place, 90 York Way, London N1 9GU", "value": "2"}], attrs=[{"name": "size", "value": "4"}]) }}
+	</fieldset>
+
+	<fieldset class="cf">
+		<div class="legend">
+			<legend>Billing address</legend>
+		</div>
+		{{ form.checkbox("billing_address_as_delivery", "", "Billing address same as delivery address")}}
 	</fieldset>
 
 	{% if method == 'delivery' %}
@@ -40,6 +58,6 @@
 		</div>
 	</fieldset>
 	{% endif %}
-	
+
 	{{ form.submit() }}
 </form>

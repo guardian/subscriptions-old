@@ -16,14 +16,12 @@
 
 <div class="row">
 	<div class="col-12">
-		<h2>Payment method</h2>
+		<h2>You have chosen</h2>
 		<p>7 day Guardian and Observer. Save 38%. iPad and iPhone access included. <a href="/">Change</a></p>
 	</div>
 </div>
 
 <div class="row">
-	<form action="/thanks">
-		<button type="submit">Continue</button>
-	</form>
+	{% include "snippet/payment-form.html" %}
 </div>
 {% endblock %}

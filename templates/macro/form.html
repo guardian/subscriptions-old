@@ -8,12 +8,12 @@
 </div>
 {%- endmacro %}
 
-{% macro select(name, label, options = []) -%}
+{% macro select(name, label, options = [], attrs = []) -%}
 <div class="field">
 	<label for="{{ name }}" class="field-label">{{ label }}</label>
 
 	<div class="field-inputs">
-		<select name="{{ name }}" id="{{ name }}">
+		<select name="{{ name }}" id="{{ name }}"{% for attr in attrs %} {{ attr.name }}="{{ attr.value }}"{% endfor %}>
 			{% for option in options %}
 			<option value="{{ option.value }}">{{ option.label }}</option>
 			{% endfor %}
@@ -24,6 +24,77 @@
 
 {% macro submit(text = "Submit") -%}
 <div class="field">
-	<button type="submit">{{ text }}</button>
+	<div class="field-inputs">
+		<button type="submit">{{ text }}</button>
+	</div>
 </div>
 {%- endmacro %}
+
+{% macro checkbox(name, label, main_label="", value="1") %}
+<div class="field">
+    {% if label %}
+    <div class="field-label">{{ main_label }}</div>
+    {% else %}
+    <label class="field-label" for="{{ name }}_id">{{ main_label }}</label>
+    {% endif %}
+    <div class="field-inputs">
+        <label for="{{ name }}_id" class="check"><input id="{{ name }}_id" name="{{ name }}" value="{{ value }}" type="checkbox" /> {{ label }} </label>
+    </div>
+</div>
+{%- endmacro %}
+
+{% macro radios(name, label, options = []) %}
+<div class="field">
+    <div class="field-label">{{ label }}</div>
+    <div class="field-inputs">
+        {% for option in options %}
+	<label for="{{ name }}_{{ loop.index }}_id" class="radio"><input type="radio" id="{{ name }}_{{ loop.index }}_id" name="{{ name }}" value="{{ option.value }}"/> {{ option.label }}</label>
+	{% endfor %}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro description(message) %}
+<div class="field">
+    <div class="field-inputs">
+        <p>{{ message }}</p>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro postcode_checker(name, label="Postcode", notice_message="", notice_class="notice") %}
+<div class="field">
+    <div class="field-label">
+        <label for="{{ name }}_id" class="field-label">{{ label }}</label>
+    </div>
+    <div class="field-inputs">
+        <input class="short" type="text" name="{{ name }}_1" />
+        <input class="short" type="text" name="{{ name }}_1" />
+	<button type="submit">Find address</button>
+	<em class="inline-message {{ notice_class }}">{{ notice_message }}</em>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro date_selects(name, label) %}
+<div class="field">
+    <label class="field-label">{{ label }}</label>
+    <div class="field-inputs">
+        <select name="{{ name }}_day">
+	  {% for i in range(1, 31) -%}
+	  <option value="{{ i }}">{{ i }}</option>
+	  {%- endfor %}
+	</select>
+        <select name="{{ name }}_month">
+	  {% for month in ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] -%}
+	  <option value="{{ loop.index }}">{{ month }}</option>
+	  {%- endfor %}
+	</select>
+	<select name="{{ name }}_day">
+	  {% for i in range(2012, 2015) -%}
+	  <option value="{{ i }}">{{ i }}</option>
+	  {%- endfor %}
+	</select>
+    </div>
+</div>
+{% endmacro %}

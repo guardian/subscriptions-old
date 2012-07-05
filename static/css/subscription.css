@@ -302,3 +302,11 @@
 	padding-right: 0;
 	width: 215px;
 }
+
+.details input.short {
+	width: 10%;
+}
+
+.field-inputs label {
+	min-height: 15px;
+}
