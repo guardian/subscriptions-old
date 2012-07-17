@@ -306,3 +306,12 @@
 .details input.short {
 	width: 10%;
 }
+
+.field-inputs.find-address .button,
+.field-inputs.find-address input
+ {
+	float: left;
+	margin-right: 5px;
+}
+
+

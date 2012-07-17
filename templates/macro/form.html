@@ -67,11 +67,11 @@
     <div class="field-label">
         <label for="{{ name }}_id" class="field-label">{{ label }}</label>
     </div>
-    <div class="field-inputs">
+    <div class="field-inputs find-address">
         <input class="short" type="text" name="{{ name }}_1" />
         <input class="short" type="text" name="{{ name }}_1" />
-	<button type="submit">Find address</button>
-	<em class="inline-message {{ notice_class }}">{{ notice_message }}</em>
+		<input class="button" type="submit" value="Find Address" />
+		<em class="inline-message {{ notice_class }}">{{ notice_message }}</em>
     </div>
 </div>
 {% endmacro %}
