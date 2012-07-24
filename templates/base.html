@@ -30,5 +30,21 @@
 				{% endif %}
 			</div>
 		</div>
+
+        <script type="text/javascript">
+            var s_account="guardiangu-users,guardiangu-network";
+        </script>
+        <script type="text/javascript" src="https://image.guim.co.uk/omni/omniture.js"></script>
+        <script type="text/javascript">
+            s.pageName="{{ page }}";
+            s.channel="Subscriptions";
+            s.prop11="Subscriptions";
+            s.hier2="GU/Subscriptions/{{ page }}";
+            {% if promoCode %}
+                //s.prop???? = "{{ promoCode }}";
+            {% endif %}
+
+            var s_code=s.t();if(s_code)document.write(s_code);
+        </script>
 	</body>
 </html>
