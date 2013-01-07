@@ -12,7 +12,10 @@ class Page(webapp2.RequestHandler):
     def __init__(self, request, response):
         self.initialize(request, response)
         self.offers = {
-            None : 'offer/default-subscription.html',
+            None : {
+                'template': 'offer/default-subscription.html',
+                'promoCode': 'FBA01',
+            },
             'offer/FBA01' : {
                 'template': 'offer/default-subscription.html',
                 'promoCode': 'FBA01',
@@ -22,7 +25,7 @@ class Page(webapp2.RequestHandler):
                 'promoCode': 'TAA01',
             },
             'offer/TCA01' : {
-                'template': 'offer/2013.html',
+                'template': 'offer/default-voucher.html',
                 'promoCode': 'TCA01',
             },
             'paper2013': {
