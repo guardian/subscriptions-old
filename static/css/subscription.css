@@ -36,6 +36,11 @@
 	position: relative;
 }
 
+.offer-panel.center {
+	margin: 0 auto 25px auto;
+	width: 310px;
+}
+
 .offer-panel button {
 	font-family: Georgia;
 }
