@@ -27,14 +27,21 @@
 	margin-top: 50px;
 }
 
-.offer-panel {
+.offer-panel,
+.offer-panel:link,
+.offer-panel:hover,
+.offer-panel:active {
 	background: #f8f8f8;
 	box-shadow: 0 0 10px #ccc;
+	color: #333;
+	display: block;
 	font-family: Georgia;
 	font-size: 14px;
 	margin: 0 100px 25px 50px;
 	position: relative;
+	text-decoration: none;
 }
+
 
 .offer-panel.center {
 	margin: 0 auto 25px auto;

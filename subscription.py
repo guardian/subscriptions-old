@@ -61,7 +61,7 @@ class Page(webapp2.RequestHandler):
             offer = self.offers.get(offer_key)
             template = jinja_environment.get_template(offer.get('template'))
             self.response.out.write(template.render(method = method, promoCode = offer.get('promoCode')))
-        elif promoCode:
+        elif offer_key:
             self.redirect('/')
 
 app = webapp2.WSGIApplication([
