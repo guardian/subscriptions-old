@@ -32,7 +32,7 @@ class Page(webapp2.RequestHandler):
                 'template': 'offer/2013.html',
                 'promoCode': 'PBA01',
             },
-            'press2012': {
+            'press2013': {
                 'template': 'offer/2013.html',
                 'promoCode': 'PBA02',
             },
