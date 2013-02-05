@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Choose your subscription type{% endblock %}
+
+{% block content %}
+<div class="row offers">
+	<div class="col-12">
+		<a href="https://www.guardiansubscriptions.co.uk/Voucher{% if promoCode %}?prom={{ promoCode }}{% endif %}" class="offer-panel center">
+			<h2 class="offer-heading large">Voucher subscription</h2>
+			<div class="offer-star">Includes iPhone<span class="break"></span> and iPad access</div>
+			<div class="offer-image cf"><img src="/static/img/print-digital.jpg" width="380" height="142" alt="" /></div>
+			<div class="offer-description">Save up to 32% on the retail price<span class="triangle"></span></div>
+			<div class="offer-content">
+				<ul>
+					<li>Subscribe and we will send you a book of vouchers</li>
+					<li>Redeem your voucher at thousands of local newsagents (delivery not included)</li>
+					<li>Instant access to the iPad edition and iPhone app</li>
+				</ul>
+			</div>
+			<div class="offer-cta">
+                <div class="button">Subscribe</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+{% endblock %}

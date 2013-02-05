@@ -29,6 +29,7 @@
 
 .offer-panel,
 .offer-panel:link,
+.offer-panel:visited,
 .offer-panel:hover,
 .offer-panel:active {
 	background: #f8f8f8;

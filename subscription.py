@@ -13,7 +13,7 @@ class Page(webapp2.RequestHandler):
         self.initialize(request, response)
         self.offers = {
             None : {
-                'template': 'offer/default-subscription.html',
+                'template': 'offer/default.html',
                 'promoCode': 'FBA01',
             },
             'offer/FBA01' : {
