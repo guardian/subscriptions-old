@@ -61,7 +61,7 @@
             s.prop5="Subscriber";
             s.prop11="Subscriber";
             s.hier2="GU/News/Subscriber/";
-            s.prop14="4.0";
+            s.prop14="5.0";
             s.prop19="Subscriber";
             s.eVar19="D=c19";
             s.prop42="Subscriber";
@@ -72,5 +72,11 @@
         <script type="text/javascript" src="//pasteup.guim.co.uk/js/lib/jquery/1.8.1/jquery.min.js"></script>
         <script type="text/javascript" src="//pasteup.guim.co.uk/js/lib/jquery.cookie/1.2/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="/static/js/site-notification.js"></script>
+	{% if self.rapp_tracking %}
+	<!-- rapp tracking for subs -->
+	{% block rapp_tracking %}{% endblock %}
+	{% endif %}
+
+
     </body>
 </html>

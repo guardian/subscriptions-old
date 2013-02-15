@@ -2,6 +2,13 @@
 {% block title %}Choose your subscription type{% endblock %}
 {% block subtitle %}Choose a package that is right for you{% endblock %}
 
+{% block rapp_tracking %}
+<script type="text/javascript"> 
+	var ftRandom = Math.random()*1000000; 
+	document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/1753;12079;944;iframe/?spotName=Subscription_Landing_Page&cachebuster='+ftRandom+'"></iframe>'); 
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="row offers">
 	<div class="col-6">
@@ -12,7 +19,7 @@
 			<div class="offer-description">Save up to 41% on the retail price<span class="triangle"></span></div>
 			<div class="offer-content">
 				<ul>
-					<li>Subscribe and we will send you a book of vouchers</li>
+					<li>Subscribe and we will send you a books of vouchers</li>
 					<li>Redeem your voucher at 1000s of local newsagents (delivery not included)</li>
 				</ul>
 			</div>
