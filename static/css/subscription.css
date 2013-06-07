@@ -110,7 +110,7 @@ p {
     padding-bottom: 0;
 }
 .header {
-    background: #00386b url(/static/img/landing/header.png) top right no-repeat;
+    background: #00386b url(/static/img/header.png) top right no-repeat;
     color: #fff;
     height: 120px;
     margin-bottom: 15px;
@@ -128,7 +128,7 @@ p {
     top: 45px;
 }
 .paper-only {
-    background: #00386b url(/static/img/landing/paper.png) top right no-repeat;
+    background: #00386b url(/static/img/paper.png) top right no-repeat;
     color: #fff;
     height: 111px;
     margin-top: 5px;
