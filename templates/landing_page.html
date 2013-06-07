@@ -4,59 +4,153 @@
 
 {% block content %}
 
-<header>
-  <h1>Pick the best package for you</h1>
-  <p>Call 0808 168 5088 to subscribe</p>
-</header>
-
-<div class="row">
-  <section class="col-4">
-    <header>
-      <h2>Voucher subscription</h2>
-    </header>
-    <p>Content</p>
-  </section>
-
-  <section class="col-4">
-    <header>
-      <h2>Home delivery subscription</h2>
-    </header>
-    <p>Content</p>
-  </section>
-
-  <section class="col-4">
-    <header>
-      <h2>Mobile subscription</h2>
-    </header>
-    <p>Content</p>
-  </section>
-
-  <div>
-    <p>Just want the paper?</p>
-    <p>Call 0808 168 5088</p>
-  </div>
+<div class="header">
+    <h1 class="header-title">Pick the best package for you</h1>
+    <p class="header-subtitle">Call <strong>0808 168 5088</strong> to subscribe</p>
 </div>
-
+<div class="row dotted-border">
+    <div class="col-8 col-subscribe">
+        <div class="row">
+            <div class="col-4 col-voucher dotted-border-bottom">
+                <div class="col-voucher-background">
+                    <div class="hd">
+                        <h2>Voucher subscription</h2>
+                    </div>
+                    <img src="/static/img/landing/voucher.png" class="sub-image" alt="Voucher subscription, includes iPad and iPhone access"/>
+                    <div class="thin-content">
+                        <div class="subscription-content">
+                            <p>Subscribe to a voucher package and we'll send you a book of personalised vouchers, which includes:</p>
+                            <ul>
+                                <li>Instant access to our iPhone app</li>
+                                <li>Access to our award-winning iPad edition</li>
+                                <li>And can be redeemed at thousands of local newsagents and retailers</li>
+                            </ul>
+                            <a class="button green-button" href="#">Subscribe now &raquo;</a>
+                        </div>
+                        <dl class="sub-options">
+                            <dt class="sub-options-title highlight">Everyday+ <span class="sub-options-value">Best value</span></dt>
+                            <dd class="sub-options-option highlight"><strong>&pound;9.99</strong> per week <span class="sub-options-saving">Save 32%</span></dd>
+                            <dt class="sub-options-title">Sixday+</dt>
+                            <dd class="sub-options-option"><strong>&pound;8.99</strong> per week <span class="sub-options-saving">Save 24%</span></dd>
+                            <dt class="sub-options-title">Weekend+</dt>
+                            <dd class="sub-options-option"><strong>&pound;5.99</strong> per week <span class="sub-options-saving">Save 22%</span></dd>
+                            <dt class="sub-options-title">Sunday+</dt>
+                            <dd class="sub-options-option"><strong>&pound;4.99</strong> per week <span class="sub-options-saving">Save 8%</span></dd>
+                        </dl>
+                        <a class="button green-button" href="#">Subscribe now &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-delivery dotted-border-bottom">
+                <div class="hd">
+                    <h2>Home delivery subscription</h2>
+                </div>
+                <img src="/static/img/landing/delivery.png" class="sub-image" alt="Home delivery to your door"/>
+                <div class="thin-content">
+                    <div class="subscription-content">
+                        <p><strong>Live inside the M25?</strong> Choose our Home Delivery service and enjoy:</p>
+                        <ul>
+                            <li>Mon-Sat papers delivered to your door by 7am</li>
+                            <li>Sunday paper delivered to your door by 8.30am</li>
+                            <li>Instant access to our iPhone app</li>
+                            <li>Access to our award-winning iPad edition</li>
+                        </ul>
+                        <a class="button green-button" href="#">Subscribe now &raquo;</a>
+                    </div>
+                    <dl class="sub-options">
+                        <dt class="sub-options-title">Everyday+</dt>
+                        <dd class="sub-options-option"><strong>&pound;13.99</strong> per week</dd>
+                        <dt class="sub-options-title">Sixday+</dt>
+                        <dd class="sub-options-option"><strong>&pound;11.99</strong> per week</dd>
+                        <dt class="sub-options-title">Weekend+</dt>
+                        <dd class="sub-options-option"><strong>&pound;7.99</strong> per week</dd>
+                        <dt class="sub-options-title">Sunday+</dt>
+                        <dd class="sub-options-option"><strong>&pound;5.99</strong> per week</dd>
+                    </dl>
+                    <a class="button green-button" href="#">Subscribe now &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 col-subscribe">
+                <div class="paper-only">
+                    <h2 class="paper-only-title">Just want the paper?</h2>
+                    <p class="paper-only-subtitle">Call <strong>0808 168 5088</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-mobile">
+        <div class="hd">
+            <h2>Mobile subscription</h2>
+        </div>
+        <img src="/static/img/landing/mobile.png" class="sub-image" class="Mobile subscription range"/>
+        <div class="thin-content">
+            <p>We have an exciting range of mobile packages, meaning you can now:</p>
+            <ul>
+                <li>Stay up to date with breaking news</li>
+                <li>Read the news whenever and wherever you are</li>
+                <li>Recieve a free 2 week trial if you're a new customer</li>
+            </ul>
+            <dl class="sub-options">
+                <dt class="sub-options-title">Guardian <span class="newline">&amp; Observer</span> iPad edition</dt>
+                <dd class="sub-options-option">
+                    <a class="button green-button" href="#">Download now &raquo;</a>
+                    <span class="sub-options-detail">Free 2 week trial</span>
+                    <strong>&pound;13.99</strong> per week
+                </dd>
+                <dt class="sub-options-title">Guardian iPad edition</dt>
+                <dd class="sub-options-option">
+                    <a class="button green-button" href="#">Download now &raquo;</a>
+                    <span class="sub-options-detail">Free 2 week trial</span>
+                    <strong>&pound;11.99</strong> per week
+                </dd>
+                <dt class="sub-options-title">Guardian iPhone app</dt>
+                <dd class="sub-options-option">
+                    <a class="button green-button" href="#">Download now &raquo;</a>
+                    <span class="sub-options-detail">Free 2 week trial</span>
+                    <strong>&pound;7.99</strong> per week
+                </dd>
+                <dt class="sub-options-title">Guardian Kindle edition</dt>
+                <dd class="sub-options-option">
+                    <a class="button green-button" href="#">Download now &raquo;</a>
+                    <span class="sub-options-detail">Free 2 week trial</span>
+                    <strong>&pound;5.99</strong> per week
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
 <div class="row">
-  <section class="col-4">
-    <header>
-      <h2>The Guardian Weekly</h2>
-    </header>
-    <p>Content</p>
-  </section>
-
-  <section class="col-4">
-    <header>
-      <h2>The Digital Edition</h2>
-    </header>
-    <p>Content</p>
-  </section>
-
-  <section class="col-4">
-    <header>
-      <h2>Guardian Extra</h2>
-    </header>
-    <p>Content</p>
-  </section>
+    <div class="col-4 col-weekly dotted-border">
+        <div class="hd">
+            <h2>The Guardian Weekly</h2>
+        </div>
+        <img src="/static/img/landing/weekly.png" class="The Guardian weekly"/>
+        <div class="content">
+            <p class="smaller">Subscribe to the Guardian Weekly and as well as condensing everything important from around the globe into each weekly issue, we'll deliver your copy straight to your door. You'll make a significant saving on the shop price, plus you'll also get instant access to our digital edition, which is available across multiple platforms. <a href="#">Find out more</a>.</p>
+            <a class="button green-button" href="#">Subscribe now &raquo;</a>
+        </div>
+    </div>
+    <div class="col-4 col-digital dotted-border">
+        <div class="hd">
+            <h2>The Digital Edition</h2>
+        </div>
+        <img src="/static/img/landing/digital.png" class="The Digital Edition"/>
+        <div class="content">
+            <p class="smaller">Subscribe to our digital edition to read full issues of the Guardian and The Observer across multiple devices. You can read the paper as printed in a digital edition on your computer or laptop, or you can export issues to your e-reader.</p>
+            <a class="button green-button" href="#">Subscribe now &raquo;</a>
+        </div>
+    </div>
+    <div class="col-4 col-extra dotted-border">
+        <div class="hd">
+            <h2>Guardian Extra</h2>
+        </div>
+        <img src="/static/img/landing/extra.png" alt="Guardian Extra"/>
+        <div class="content">
+            <p class="smaller">Sign up for free and enjoy benefits such as invitations to exclusive events with our award-winning journalists, newsroom visits, a weekly email newsletter, variety of special offers, discounts from our partners in the arts and much more.</p>
+            <a class="button green-button" href="#">Sign-up now &raquo;</a>
+        </div>
+    </div>
 </div>
 {% endblock content %}

@@ -1,330 +1,277 @@
-/* sundries */
+/* "Grid" updates, le sigh */
+.row .col-voucher,
+.row .col-weekly {
+    width: 272px;
+}
+.row .col-delivery,
+.row .col-mobile,
+.row .col-digital,
+.row .col-extra {
+    position: relative;
+    margin-left: 62px;
+    width: 272px;
+}
 
+.row .col-subscribe {
+    width: 606px;
+}
+
+.row .col-delivery:before,
+.row .col-mobile:before,
+.row .col-digital:before,
+.row .col-extra:before {
+    border-left: 1px solid #999;
+    bottom: -1px;
+    content: '';
+    left: -31px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.row .col-mobile:before {
+    bottom: -5px;
+}
+.row .col-digital:before,
+.row .col-extra:before {
+    top: 15px;
+}
+
+/* Landing page */
+body {
+    font-size: 12px;
+    line-height: 17px;
+}
+ul {
+    margin-left: 15px;
+}
+li {
+    margin-bottom: 4px;
+}
+h1, h2, h3, h4 {
+    font-family: "Guardian Egyptian Headline", Georgia, serif;
+}
+p {
+    margin-bottom: 3px;
+}
+.smaller {
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 8px;
+}
 .global-header {
-	border-top: 1px solid #bebebe;
-	margin-top: 10px;
-	padding-top: 10px;
+	margin-bottom: -7px;
+	margin-top: 16px;
 }
-
-.global-header img {
-	margin-right: 10px;
+.footer {
+	margin-top: 20px;
 }
-
-.hero {
-	border-bottom: 4px solid #ededed;
+.guardian-logo {
+    margin-right: 11px;
 }
-
-.hero img {
-	float: left;
+.observer-logo {
+    background: transparent url(/static/img/border.png) top left no-repeat;
+    padding-left: 18px;
 }
-
 .row {
 	margin-bottom: 10px;
 }
-
-/* main offer panels */
-.offers {
-	margin-top: 50px;
+.hd {
+    background-color: #00386b;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 7px 8px 4px;
+}
+.content {
+    min-height: 152px;
+    padding: 6px 0 20px;
+    position: relative;
+}
+.content .green-button {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20px;
+    position: absolute;
+}
+.thin-content {
+    padding: 0 32px 20px;
+}
+.subscription-content {
+    min-height: 215px;
+    position: relative;
+}
+.subscription-content .green-button {
+    bottom: 0;
+    position: absolute;
+}
+.col-voucher-background {
+    background-color: #e3eaf0;
+}
+.col-mobile .thin-content {
+    padding-bottom: 0;
+}
+.header {
+    background: #00386b url(/static/img/landing/header.png) top right no-repeat;
+    color: #fff;
+    height: 120px;
+    margin-bottom: 15px;
+    padding-left: 36px;
+}
+.header-title {
+    font-size: 32px;
+    position: relative;
+    top: 30px;
+}
+.header-subtitle {
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+    font-size: 18px;
+    position: relative;
+    top: 45px;
+}
+.paper-only {
+    background: #00386b url(/static/img/landing/paper.png) top right no-repeat;
+    color: #fff;
+    height: 111px;
+    margin-top: 5px;
+    padding-left: 32px;
+}
+.paper-only-title {
+    font-family: "Guardian Egyptian Headline", Georgia, serif;
+    font-size: 28px;
+    position: relative;
+    top: 26px;
+}
+.paper-only-subtitle {
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+    font-size: 18px;
+    position: relative;
+    top: 45px;
+}
+.dotted-border {
+    margin-bottom: 4px;
+    padding-top: 15px;
+}
+.dotted-border-bottom {
+    border-bottom: 1px dotted #666;
+    padding-bottom: 15px;
+}
+a.green-button {
+    background-color: #84be43;
+    border-color: #84be43;
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+    padding: 10px 20px 7px;
+    text-shadow: none;
+    text-transform: uppercase;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+a.green-button:hover,
+a.green-button:focus {
+    background-color: #77ac3b;
+    border-color: #77ac3b;
+}
+a.green-button:active {
+    background-color: #6a9935;
+    border-color: #6a9935;
+    -webkit-box-shadow: 0 2px 5px 2px #6a9935;
+    -moz-box-shadow: 0 2px 5px 2px #6a9935;
+    box-shadow: inset 0 0 8px #6a9935;
+}
+.sub-image {
+    display: block;
+    margin: 8px auto 6px;
+}
+.sub-options {
+    font-size: 14px;
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+.sub-options-title {
+    color: #00386b;
+    font-family: "Guardian Egyptian Headline", Georgia, serif;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 4px;
+    position: relative;
+    text-transform: uppercase;
+    width: 156px;
+}
+.sub-options-option {
+    margin-bottom: 22px;
+}
+.sub-options-option strong {
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+}
+.sub-options-title.highlight {
+    background-color: #fff;
+    border-left: 2px solid #009946;
+    border-right: 2px solid #009946;
+    border-top: 2px solid #009946;
+    margin: -11px -11px 0;
+    padding: 9px 9px 0;
+    width: auto;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
+.sub-options-option.highlight {
+    background-color: #fff;
+    border-bottom: 2px solid #009946;
+    border-left: 2px solid #009946;
+    border-right: 2px solid #009946;
+    margin: 0 -11px 11px;
+    padding: 4px 9px 9px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+.sub-options-saving {
+    color: #d61d00;
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sub-options-detail {
+    display: block;
+    color: #d61d00;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.sub-options-value {
+    background-color: #009946;
+    color: #fff;
+    display: block;
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+    font-size: 12px;
+    font-weight: normal;
+    height: 35px;
+    line-height: 12px;
+    padding-top: 9px;
+    position: absolute;
+    right: -6px;
+    top: -22px;
+    text-align: center;
+    text-transform: none;
+    width: 44px;
+    -webkit-border-radius: 44px;
+    -moz-border-radius: 44px;
+    border-radius: 44px;
+    -webkit-transform: rotate(7.5deg);
+    -moz-transform: rotate(7.5deg);
+    -ms-transform: rotate(7.5deg);
+    -o-transform: rotate(7.5deg);
+    transform: rotate(7.5deg);
+}
+.sub-options .green-button {
+    margin-bottom: 4px;
+}
+.newline {
+    display: block;
 }
 
-.offer-panel,
-.offer-panel:link,
-.offer-panel:visited,
-.offer-panel:hover,
-.offer-panel:active {
-	background: #f8f8f8;
-	box-shadow: 0 0 10px #ccc;
-	color: #333;
-	display: block;
-	font-family: Georgia;
-	font-size: 14px;
-	margin: 0 100px 25px 50px;
-	position: relative;
-	text-decoration: none;
+[class*="col-"].border-left {
+    border-left: 1px solid #ccc;
+    margin-left: 10px;
+    padding-left: 9px;
 }
-
-
-.offer-panel.center {
-	margin: 0 auto 25px auto;
-	width: 310px;
-}
-
-.offer-panel button {
-	font-family: Georgia;
-}
-
-.col-6:first-child .offer-panel {
-	margin: 0 50px 25px 100px;
-}
-
-.offer-heading {
-	background: #005689;
-	color: #fff;
-	font-weight: bold;
-	padding: 10px;
-}
-
-.offer-star {
-	background: url(../img/star.png) no-repeat;
-	color: #fff;
-	height: 62px;
-	font-weight: bold;
-	padding: 35px 20px;
-	position: absolute;
-	right: -50px;
-	text-align: center;
-	top: -30px;
-	width: 92px;
-	z-index: 2;
-}
-
-.offer-image {
-	background: #ededed;
-	overflow: hidden;
-}
-
-.offer-image img {
-	float: left;
-	max-width: 380px;	
-}
-
-.offer-image p {
-	font-size: 16px;
-	line-height: 1.2;
-	margin: 15px 10px 0 205px;
-}
-
-.offer-description {
-	background: #ccc;
-	color: #000;
-	margin-bottom: 25px;
-	padding: 15px 0;
-	position: relative;
-	text-align: center;
-	font-weight: bold;
-}
-
-.offer-description .triangle {
-	border-left: 155px solid transparent;
-	border-right: 155px solid transparent;
-	border-top: 15px solid #ccc;
-	bottom: -15px;
-	height: 0;
-	left: 0;
-	position: absolute;
-	width: 0;
-}
-
-.offer-content {
-	padding: 15px;
-}
-
-.offer-content ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.offer-content ul li {
-	background: url(../img/list-item.gif) left no-repeat;
-	list-style: none;
-	margin: 25px 0 0 0;
-	min-height: 30px;
-	padding: 0 0 0 45px;
-}
-
-.offer-content ul li:first-child {
-	margin-top: 0;
-}
-
-.offer-cta {
-	margin: 15px auto 0 auto;
-	padding-bottom: 15px;
-	width: 100%;
-	text-align: center;
-}
-
-.offer-cta .button + .button {
-	margin-left: 15px;
-}
-
-.break {
-	display: block;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-	background: #fafafa;
-}
-
-.breadcrumb .items {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumb .item {
-	background: #e0ecf4;
-	float: left;
-	line-height: 40px;
-	list-style: none;
-	padding-left: 30px;
-	position: relative;
-}
-
-.breadcrumb .item a {
-	color: #fff;
-}
-
-.breadcrumb .item:first-child {
-	padding-left: 10px;
-}
-
-.breadcrumb .item b,
-.breadcrumb .item i {
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	border-left: 20px solid #e0ecf4;
-	position: absolute;
-	top: 50%;
-	margin-top: -20px;
-	left: 100%;
-	z-index: 3;
-}
-
-.breadcrumb .item i {
-	border-left-color: #fff;
-	margin-left: 3px;
-	z-index: 2;
-}
-
-.breadcrumb .active,
-.breadcrumb .complete {
-	background: #005689;
-	color: #fff;
-}
-
-.breadcrumb .item.active b,
-.breadcrumb .item.complete b {
-	border-left-color: #005689;
-}
-
-/* how it works */
-.how-it-works {
-	font-size: 14px;
-}
-
-.how-it-works .steps {
-	list-style: none;
-	margin: 0 0 10px 0;
-	padding: 0;
-}
-
-.how-it-works .steps .step {
-	background: #e0ecf4;
-	float: left;
-	list-style: none;
-	margin: 0 20px 0 0;
-	min-height: 220px;
-	padding: 0;
-	position: relative;
-	width: 215px;
-}
-
-.how-it-works .steps .step:first-child {
-	padding-left: 0;
-}
-
-.how-it-works .steps .step .arrow {
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 110px solid transparent;
-	border-bottom: 110px solid transparent;
-	border-left: 20px solid #e0ecf4;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	z-index: 2;
-}
-
-.how-it-works .steps .step p {
-	margin: 10px;
-	padding: 0;
-}
-
-.how-it-works .find-out-more {
-	margin-top: 5px;
-}
-
-.how-it-works .in-m25 {
-	margin-right: 20px;
-}
-
-/* bundle selector */
-.choose-a-bundle {
-	position: relative;
-}
-
-.choose-a-bundle .offer-star {
-	font-family: Georgia;
-	font-size: 14px;
-	right: 5px;
-	top: 70px;
-}
-
-.bundle-selector .field {
-	float: left;
-	width: 100%;
-}
-
-.bundle-selector input[type="radio"] {
-	float: left;
-}
-
-.bundle-selector label {
-	float: right;
-	width: 440px;
-}
-
-.bundle-selector label span {
-	color: #0061a6;
-	display: block;
-	margin-top: 4px;
-}
-
-/* forms */
-.details .legend {
-	display: block;
-	font-family: Georgia, serif;
-	font-size: 18px;
-	margin: 20px 0 10px 0;
-}
-
-.details .field-inputs {
-	width: auto;
-}
-
-.button-links a {
-	clear: both;
-	margin: 10px 20px 0 0;
-	padding-left: 0;
-	padding-right: 0;
-	width: 215px;
-}
-
-.details input.short {
-	width: 10%;
-}
-
-.field-inputs.find-address .button,
-.field-inputs.find-address input
- {
-	float: left;
-	margin-right: 5px;
-}
-
-
