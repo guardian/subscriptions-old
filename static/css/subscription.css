@@ -96,21 +96,21 @@ p {
     padding: 0 32px 20px;
 }
 .subscription-content {
-    min-height: 215px;
+    min-height: 230px;
     position: relative;
 }
 .subscription-content .green-button {
-    bottom: 0;
+    bottom: 10px;
     position: absolute;
 }
-.col-voucher-background {
+.col-inner {
     background-color: #e3eaf0;
 }
 .col-mobile .thin-content {
     padding-bottom: 0;
 }
 .header {
-    background: #00386b url(/static/img/header.png) top right no-repeat;
+    background: #84be43 url(/static/img/header.png) top right no-repeat;
     color: #fff;
     height: 120px;
     margin-bottom: 15px;
