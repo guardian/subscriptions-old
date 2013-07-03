@@ -96,7 +96,7 @@ p {
     padding: 0 32px 20px;
 }
 .subscription-content {
-    min-height: 230px;
+    min-height: 140px;
     position: relative;
 }
 .subscription-content .green-button {
@@ -179,7 +179,7 @@ a.green-button:active {
 }
 .sub-image {
     display: block;
-    margin: 8px auto 6px;
+    margin: 8px auto 16px;
 }
 .sub-options {
     font-size: 14px;
