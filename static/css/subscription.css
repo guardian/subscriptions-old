@@ -1,4 +1,7 @@
 /* "Grid" updates, le sigh */
+.row {
+    margin-bottom: 15px;
+}
 .row .col-voucher,
 .row .col-weekly {
     width: 272px;
@@ -21,7 +24,7 @@
 .row .col-digital:before,
 .row .col-extra:before {
     border-left: 1px solid #999;
-    bottom: -1px;
+    bottom: -2px;
     content: '';
     left: -31px;
     position: absolute;
@@ -29,7 +32,7 @@
     width: 1px;
 }
 .row .col-mobile:before {
-    bottom: -5px;
+    bottom: -16px;
 }
 .row .col-digital:before,
 .row .col-extra:before {
@@ -53,17 +56,9 @@ h1, h2, h3, h4 {
 p {
     margin-bottom: 3px;
 }
-.smaller {
-    font-size: 11px;
-    line-height: 14px;
-    margin-bottom: 8px;
-}
 .global-header {
-	margin-bottom: -7px;
-	margin-top: 16px;
-}
-.footer {
-	margin-top: 20px;
+    margin-bottom: -12px;
+    margin-top: 16px;
 }
 .guardian-logo {
     margin-right: 11px;
@@ -72,8 +67,8 @@ p {
     background: transparent url(/static/img/border.png) top left no-repeat;
     padding-left: 18px;
 }
-.row {
-	margin-bottom: 10px;
+.footer {
+    margin-top: 20px;
 }
 .hd {
     background-color: #00386b;
@@ -81,33 +76,23 @@ p {
     margin-bottom: 0;
     padding: 7px 8px 4px;
 }
+.col-inner {
+    background-color: #e3eaf0;
+}
+.subscription-content {
+    min-height: 140px;
+    padding: 0 32px;
+}
 .content {
-    min-height: 152px;
-    padding: 6px 0 20px;
+    min-height: 192px;
+    padding: 10px 0 15px;
     position: relative;
 }
 .content .green-button {
     bottom: 0;
     left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: absolute;
-}
-.thin-content {
-    padding: 0 32px 20px;
-}
-.subscription-content {
-    min-height: 140px;
-    position: relative;
-}
-.subscription-content .green-button {
-    bottom: 10px;
-    position: absolute;
-}
-.col-inner {
-    background-color: #e3eaf0;
-}
-.col-mobile .thin-content {
-    padding-bottom: 0;
 }
 .header {
     background: #84be43 url(/static/img/header.png) top right no-repeat;
@@ -131,7 +116,6 @@ p {
     background: #00386b url(/static/img/paper.png) top right no-repeat;
     color: #fff;
     height: 111px;
-    margin-top: 5px;
     padding-left: 32px;
 }
 .paper-only-title {
@@ -147,12 +131,11 @@ p {
     top: 45px;
 }
 .dotted-border {
-    margin-bottom: 4px;
     padding-top: 15px;
 }
 .dotted-border-bottom {
     border-bottom: 1px dotted #666;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
 }
 a.green-button {
     background-color: #84be43;
@@ -181,49 +164,52 @@ a.green-button:active {
     display: block;
     margin: 8px auto 16px;
 }
+.col-mobile .sub-options {
+    padding-bottom: 2px;
+}
 .sub-options {
     font-size: 14px;
-    margin-bottom: 22px;
     margin-top: 20px;
+    padding: 0 32px 15px;
+}
+.sub-options-link {
+    display: block;
+    margin-bottom: 26px;
+}
+.sub-options-link:hover,
+.sub-options-link:active,
+.sub-options-link.highlight {
+    background-color: #fff;
+    margin: -10px -10px 16px;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.sub-options-link:active,
+.sub-options-link.highlight {
+    border: 2px solid #009946;
+    margin: -11px -11px 15px;
+    padding: 9px;
 }
 .sub-options-title {
     color: #00386b;
+    display: block;
     font-family: "Guardian Egyptian Headline", Georgia, serif;
     font-size: 18px;
+    font-weight: bold;
     line-height: 18px;
     margin-bottom: 4px;
-    position: relative;
     text-transform: uppercase;
     width: 156px;
 }
 .sub-options-option {
-    margin-bottom: 22px;
+    color: #333;
 }
 .sub-options-option strong {
     font-family: "Guardian Egyptian Text", Georgia, serif;
-}
-.sub-options-title.highlight {
-    background-color: #fff;
-    border-left: 2px solid #009946;
-    border-right: 2px solid #009946;
-    border-top: 2px solid #009946;
-    margin: -11px -11px 0;
-    padding: 9px 9px 0;
-    width: auto;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
-}
-.sub-options-option.highlight {
-    background-color: #fff;
-    border-bottom: 2px solid #009946;
-    border-left: 2px solid #009946;
-    border-right: 2px solid #009946;
-    margin: 0 -11px 11px;
-    padding: 4px 9px 9px;
-    -webkit-border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
 }
 .sub-options-saving {
     color: #d61d00;
@@ -263,15 +249,9 @@ a.green-button:active {
     -o-transform: rotate(7.5deg);
     transform: rotate(7.5deg);
 }
-.sub-options .green-button {
-    margin-bottom: 4px;
+.no-margin {
+    margin: 0;
 }
 .newline {
     display: block;
-}
-
-[class*="col-"].border-left {
-    border-left: 1px solid #ccc;
-    margin-left: 10px;
-    padding-left: 9px;
 }
