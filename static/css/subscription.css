@@ -165,12 +165,12 @@ a.green-button:active {
     margin: 8px auto 16px;
 }
 .col-mobile .sub-options {
-    padding-bottom: 2px;
+    padding-bottom: 5px;
 }
 .sub-options {
     font-size: 14px;
     margin-top: 20px;
-    padding: 0 32px 15px;
+    padding: 0 32px 20px;
 }
 .sub-options-link {
     display: block;
@@ -178,6 +178,7 @@ a.green-button:active {
 }
 .sub-options-link:hover,
 .sub-options-link:active,
+.sub-options-link:focus,
 .sub-options-link.highlight {
     background-color: #fff;
     margin: -10px -10px 16px;
@@ -189,14 +190,17 @@ a.green-button:active {
     border-radius: 10px;
 }
 .sub-options-link:active,
+.sub-options-link:focus,
 .sub-options-link.highlight {
     border: 2px solid #009946;
     margin: -11px -11px 15px;
     padding: 9px;
 }
+.sub-options-link * {
+    pointer-events: none;
+}
 .sub-options-title {
     color: #00386b;
-    display: block;
     font-family: "Guardian Egyptian Headline", Georgia, serif;
     font-size: 18px;
     font-weight: bold;
@@ -207,6 +211,7 @@ a.green-button:active {
 }
 .sub-options-option {
     color: #333;
+    display: block;
 }
 .sub-options-option strong {
     font-family: "Guardian Egyptian Text", Georgia, serif;
