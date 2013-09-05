@@ -113,10 +113,11 @@ p {
     top: 45px;
 }
 .paper-only {
-    background: #00386b url(/static/img/paper.png) top right no-repeat;
+    background: #00386b;
     color: #fff;
     height: 111px;
     padding-left: 32px;
+    position: relative;
 }
 .paper-only-title {
     font-family: "Guardian Egyptian Headline", Georgia, serif;
@@ -125,6 +126,7 @@ p {
     top: 26px;
 }
 .paper-only-subtitle {
+    display: inline;
     font-family: "Guardian Egyptian Text", Georgia, serif;
     font-size: 18px;
     position: relative;
@@ -138,6 +140,11 @@ p {
 .paper-only-subtitle a:active {
     text-decoration: none;
     border-bottom: 1px solid #fff;
+}
+.paper-only-image {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .dotted-border {
     padding-top: 15px;
