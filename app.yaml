@@ -1,5 +1,5 @@
 application: guardian-subscriptions
-version: 14  #remember to update the s.prop14 in base.html if you update this version number
+version: 15  #remember to update the s.prop14 in base.html if you update this version number
 runtime: python27
 api_version: 1
 threadsafe: true
