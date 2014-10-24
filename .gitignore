@@ -2,3 +2,7 @@
 venv
 .idea
 *~
+*.map
+.sass-cache
+node_modules
+static/bower_components

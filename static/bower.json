@@ -1,0 +1,7 @@
+{
+    "name": "subscriptions",
+    "version": "0.0.0",
+    "dependencies": {
+        "guss": "3.3.0"
+    }
+}
