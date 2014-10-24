@@ -79,9 +79,15 @@ p {
 .col-inner {
     background-color: #e3eaf0;
 }
+.col-mobile .col-inner {
+    min-height: 550px;
+}
 .subscription-content {
-    min-height: 150px;
+    min-height: 130px;
     padding: 0 32px;
+}
+.subscription-content + .button {
+    margin: 15px 32px;
 }
 .content {
     min-height: 192px;
@@ -180,123 +186,6 @@ a.green-button:active {
     display: block;
     margin: 8px auto 16px;
 }
-.col-mobile .sub-options {
-    padding-bottom: 5px;
-}
-.sub-options {
-    font-size: 14px;
-    margin-top: 20px;
-    padding: 0 32px 20px;
-}
-.sub-options-link {
-    display: block;
-    margin-bottom: 26px;
-}
-.sub-options-link:hover,
-.sub-options-link:active,
-.sub-options-link:focus,
-.sub-options-link.highlight {
-    background-color: #fff;
-    margin: -10px -10px 16px;
-    padding: 10px;
-    position: relative;
-    text-decoration: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-.sub-options-link:active,
-.sub-options-link:focus,
-.sub-options-link.highlight {
-    border: 2px solid #009946;
-    margin: -11px -11px 15px;
-    padding: 9px;
-}
-.sub-options-link {
-    display: block;
-    margin-bottom: 26px;
-}
-.sub-options-link:hover,
-.sub-options-link:active,
-.sub-options-link:focus,
-.sub-options-link.highlight {
-    background-color: #fff;
-    margin: -10px -10px 16px;
-    padding: 10px;
-    position: relative;
-    text-decoration: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-.sub-options-link:active,
-.sub-options-link:focus,
-.sub-options-link.highlight {
-    border: 2px solid #009946;
-    margin: -11px -11px 15px;
-    padding: 9px;
-}
-.sub-options-link * {
-    pointer-events: none;
-}
-.sub-options-title {
-    color: #00386b;
-    font-family: "Guardian Egyptian Headline", Georgia, serif;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 18px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    width: 156px;
-}
-.sub-options-option {
-    color: #333;
-    display: block;
-}
-.sub-options-option strong {
-    font-family: "Guardian Egyptian Text", Georgia, serif;
-}
-.sub-options-saving {
-    color: #d61d00;
-    float: right;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.sub-options-detail {
-    display: block;
-    color: #d61d00;
-    line-height: 12px;
-    font-size: 12px;
-    font-weight: bold;
-}
-.sub-options-value {
-    background-color: #009946;
-    color: #fff;
-    display: block;
-    font-family: "Guardian Egyptian Text", Georgia, serif;
-    font-size: 12px;
-    font-weight: normal;
-    height: 35px;
-    line-height: 12px;
-    padding-top: 9px;
-    position: absolute;
-    right: -6px;
-    top: -22px;
-    text-align: center;
-    text-transform: none;
-    width: 44px;
-    -webkit-border-radius: 44px;
-    -moz-border-radius: 44px;
-    border-radius: 44px;
-    -webkit-transform: rotate(7.5deg);
-    -moz-transform: rotate(7.5deg);
-    -ms-transform: rotate(7.5deg);
-    -o-transform: rotate(7.5deg);
-    transform: rotate(7.5deg);
-}
 .no-margin {
     margin: 0;
-}
-.newline {
-    display: block;
 }
