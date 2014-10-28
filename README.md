@@ -11,18 +11,21 @@ Usage
 -----
 
 * Download the google appengine sdk
-* Create a virtualenv for the project
-* Install jinja2 into the virtualenv
+* Install npm and bower dependencies
 
 ### Running the app locally
 
+Setup nginx
+
+    nginx/setup.sh
+
 To run the app locally, use the following command.
 
-    <path-to-virtualenv>/bin/python <path-to-google-appengine-sdk>/dev_appserver.py <path-to-subscriptions> --address 0.0.0.0
+    <path-to-virtualenv>/bin/python <path-to-google-appengine-sdk>/dev_appserver.py <path-to-subscriptions> --port=8088
 
 e.g.
 
-    venv/bin/python ~/bin/google_appengine/dev_appserver.py . --address 0.0.0.0
+    venv/bin/python ~/bin/google_appengine/dev_appserver.py . --port=8088
 
 ### Deploying (uploading) your changes
 
@@ -34,6 +37,8 @@ Python SDK.
 e.g.
 
     venv/bin/python ~/bin/google_appengine/appcfg.py update .
+
+View at http://subscribe.thegulocal.com/
 
 Notes
 -----
