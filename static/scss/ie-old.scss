@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+$mq-responsive: false;
+$browser-supports-flexbox: false;
+$browser-supports-columns: false;
+$guss-row-fallback-width: 980px;
+
+/* Styles */
+@import 'main';
+
+.row--items-1 .row__item {
+    width: 100%;
+}
+

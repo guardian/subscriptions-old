@@ -1,0 +1,44 @@
+
+.global-header {
+    margin-top: $gs-baseline*1.5;
+    margin-bottom: $gs-baseline;
+}
+
+.global-home {
+    text-decoration: none;
+}
+
+.guardian-logo {
+    margin-right: $gs-gutter/2 - 4px;
+    border: 0;
+}
+
+.observer-logo {
+    background: transparent url(/static/img/border.png) top left no-repeat;
+    padding-left: $gs-gutter/2;
+}
+
+.page-header {
+    background-color: $c-brand;
+    padding: $gs-baseline $gs-gutter/2;
+
+    @include mq(tablet) {
+        padding-left: $gs-gutter;
+        padding-right: $gs-gutter;
+    }
+
+    &, .page-header__title {
+        color: $c-white;
+    }
+}
+
+.global-footer {
+    @include fs-bodyCopy(1);
+    background-color: $c-neutral5;
+    color: $c-neutral1;
+    padding: $gs-baseline $gs-gutter;
+
+    a {
+        color: $c-neutral1;
+    }
+}

@@ -2,6 +2,8 @@
     "name": "subscriptions",
     "version": "0.0.0",
     "dependencies": {
-        "guss": "3.3.0"
+        "guss": "3.3.0",
+        "pasteup-buttons": "0.4.10",
+        "pasteup-palette": "3.3.1"
     }
 }

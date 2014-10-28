@@ -14,7 +14,9 @@ module.exports = function(grunt) {
         sass: {
             compile: {
                 files: {
-                    'static/css/main.min.css': 'static/scss/main.scss'
+                    'static/css/main.min.css': 'static/scss/main.scss',
+                    'static/css/ie9.min.css': 'static/scss/ie9.scss',
+                    'static/css/ie-old.min.css': 'static/scss/ie-old.scss'
                 },
                 options: {
                     style: 'compressed',

@@ -1,0 +1,13 @@
+
+/* Set max width */
+@mixin gs-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: gs-span(12) + $gs-gutter * 2;
+}
+
+@include grid-system;
+
+/* Setup rows */
+@include guss-row-utility;
+@include guss-row('.row');

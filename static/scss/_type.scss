@@ -1,0 +1,55 @@
+$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
+
+@include guss-webfonts(
+    (
+        'Guardian Text Egyptian Web': (
+            (weight: 'regular', style: 'normal'),
+            (weight: 'regular', style: 'italic'),
+            (weight: 'medium', style: 'normal', use-as: (weight: 'bold', style: 'normal')),
+        ),
+        'Guardian Egyptian Web': (
+            (weight: 'light', style: 'normal'),
+            (weight: 'regular', style: 'normal'),
+            (weight: 'medium', style: 'normal'),
+            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack', style: 'normal')),
+        ),
+        'Guardian Text Sans Web': (
+            (weight: 'regular', style: 'normal'),
+            (weight: 'regular', style: 'italic'),
+            (weight: 'medium', style: 'normal', use-as: (weight: 'bold', style: 'normal')),
+        ),
+        'Guardian Sans Web': (
+            (weight: 'regular', style: 'normal'),
+        )
+    )
+);
+
+@include guss-typography-defaults;
+
+html {
+    font-family: $f-serif-text;
+
+    // Set baseline font size to 10px
+    // This is used as a baseline for rem (root ems) values
+    font-size: 62.5%;
+
+    // For IE11 to do the math properly
+    // See http://bit.ly/1g4X0bX — thanks @7studio and @dawitti
+    font-size: calc(1em * .625);
+}
+
+body {
+    color: $c-body;
+    font-size: 1.6em; // Bump font-size back up to 16px
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $c-neutral1;
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: ($gs-baseline/3)*2;
+}
