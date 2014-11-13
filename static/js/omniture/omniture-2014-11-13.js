@@ -64,7 +64,7 @@ function s_doPlugins(s) {
     s.events = s.events ? s.events : '';
 
     /* s_code version */
-    s.prop62 = "Guardian Membership 1.0 20140618";
+    s.prop62 = 'Guardian Subscriber JS-1.2';
 
     /* URL */
     s.prop61 = "D=g";
