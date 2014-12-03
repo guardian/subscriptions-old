@@ -1,35 +1,43 @@
 
+body {
+    background-color: $c-bg;
+
+    > .gs-container {
+        background-color: $c-white;
+    }
+}
+
 .global-header {
-    margin-top: $gs-baseline*1.5;
-    margin-bottom: $gs-baseline;
-}
+    background-color: $c-brand;
 
-.global-home {
-    text-decoration: none;
-}
+    @include mq(420px) {
+        text-align: right;
+    }
 
-.guardian-logo {
-    margin-right: $gs-gutter/2 - 4px;
-    border: 0;
-}
+    .icon-logo {
+        background-image: url(../img/logo.png);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        height: 8em;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
 
-.observer-logo {
-    background: transparent url(/static/img/border.png) top left no-repeat;
-    padding-left: $gs-gutter/2;
+        @include mq(420px) {
+            margin: 0;
+        }
+    }
 }
 
 .page-header {
-    background-color: $c-brand;
-    padding: $gs-baseline $gs-gutter/2;
+    margin-top: $gs-baseline/2;
+}
 
-    @include mq(tablet) {
-        padding-left: $gs-gutter;
-        padding-right: $gs-gutter;
-    }
-
-    &, .page-header__title {
-        color: $c-white;
-    }
+.page-header__title {
+    @include fs-headline(9);
+    margin-bottom: $gs-baseline*1.5;
 }
 
 .global-footer {

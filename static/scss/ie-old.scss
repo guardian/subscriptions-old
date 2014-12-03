@@ -3,7 +3,7 @@
 $mq-responsive: false;
 $browser-supports-flexbox: false;
 $browser-supports-columns: false;
-$guss-row-fallback-width: 980px;
+$guss-row-fallback-width: 960px;
 
 /* Styles */
 @import 'main';
@@ -12,3 +12,10 @@ $guss-row-fallback-width: 980px;
     width: 100%;
 }
 
+.global-header {
+    min-width: $guss-row-fallback-width + $gs-gutter;
+}
+
+.gs-container {
+    min-width: $guss-row-fallback-width;
+}
