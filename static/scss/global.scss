@@ -32,7 +32,7 @@ body {
 }
 
 .page-header {
-    margin-top: $gs-baseline/2;
+    padding-top: $gs-baseline/2;
 }
 
 .page-header__title {
@@ -43,10 +43,10 @@ body {
 .global-footer {
     @include fs-bodyCopy(1);
     background-color: $c-neutral5;
-    color: $c-neutral1;
+    color: $c-body;
     padding: $gs-baseline $gs-gutter;
 
     a {
-        color: $c-neutral1;
+        color: $c-body;
     }
 }

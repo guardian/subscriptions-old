@@ -7,7 +7,7 @@ body {
 @mixin gs-container {
     position: relative;
     margin: 0 auto;
-    max-width: gs-span(12) + $gs-gutter * 2;
+    max-width: gs-span(12) + $gs-gutter*2;
     padding-left: $gs-gutter/2;
     padding-right: $gs-gutter/2;
 }
@@ -17,3 +17,13 @@ body {
 /* Setup rows */
 @include guss-row-utility;
 @include guss-row('.row');
+
+.row__item {
+    margin-bottom: $gs-baseline*2;
+
+    @include mq(tablet) {
+        & + & {
+            border-left: $gs-gutter solid $c-white;
+        }
+    }
+}
