@@ -31,13 +31,32 @@ body {
     }
 }
 
-.page-header {
-    padding-top: $gs-baseline/2;
-}
+.global-brandbar {
+    background-color: $c-brand;
 
-.page-header__title {
-    @include fs-headline(9);
-    margin-bottom: $gs-baseline*1.5;
+    > .gs-container {
+        background-color: $c-brand-dark;
+    }
+
+    a {
+        color: $c-white;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: lowercase;
+    }
+
+    .icon-arrow-up {
+        background-image: url(../img/arrow-up.png);
+        background-position: center 10px;
+        background-repeat: no-repeat;
+        border: 1px solid #fff;
+        border-radius: 34px;
+        display: inline-block;
+        height: 34px;
+        width: 34px;
+        margin: $gs-baseline/2 $gs-gutter/2 $gs-baseline/2 0;
+        vertical-align: middle;
+    }
 }
 
 .global-footer {
@@ -49,4 +68,13 @@ body {
     a {
         color: $c-body;
     }
+}
+
+.page-header {
+    padding-top: $gs-baseline/2;
+}
+
+.page-header__title {
+    @include fs-headline(9);
+    margin-bottom: $gs-baseline*1.5;
 }
