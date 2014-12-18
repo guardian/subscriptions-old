@@ -16,8 +16,31 @@
     @include u-h;
 }
 
+.u-unstyled-list {
+    margin: 0;
+    list-style: none;
+}
+
+.inline-list {
+    @extend .u-unstyled-list;
+}
+
+.inline-list__item {
+    display: inline-block;
+}
+
 .hidden-mobile {
     @include mq($until: tablet) {
         display: none !important;
+    }
+}
+
+.break {
+    display: block;
+}
+
+.break-tablet {
+    @include mq(tablet) {
+        display: block;
     }
 }

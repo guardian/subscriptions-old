@@ -3,17 +3,18 @@
 $mq-responsive: false;
 $browser-supports-flexbox: false;
 $browser-supports-columns: false;
-$guss-row-fallback-width: 960px;
+$guss-row-fallback-width: 980px;
 
 /* Styles */
 @import 'main';
 
+// TODO
 .row--items-1 .row__item {
     width: 100%;
 }
 
 .global-header {
-    min-width: $guss-row-fallback-width + $gs-gutter;
+    min-width: $guss-row-fallback-width + $gs-gutter*2;
 }
 
 .gs-container {

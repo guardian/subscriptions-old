@@ -1,38 +1,56 @@
 
 /* Blocks */
 .block {
-    background-color: $c-neutral6;
+    background-color: $c-neutral7;
+    @include box-shadow(0 1px $c-brand inset);
+    padding: $gs-baseline/2 $gs-gutter/4 $gs-baseline;
     position: relative;
+
+    // TODO: will become global style
+    .button {
+        font-size: 14px;
+        line-height: 36px;
+        padding-left: $gs-gutter;
+        padding-right: $gs-gutter/4;
+        min-width: 160px;
+
+        &:after {
+            @include icon-arrow;
+        }
+    }
 }
 
 .block__title {
-    @include fs-headline(5);
-    border-top: 1px solid $c-brand-dark;
+    font-size: 21px;
+    line-height: 25px;
     margin-bottom: $gs-baseline;
-    padding: $gs-baseline/2 $gs-gutter/2 0;
 
     @include mq(tablet) {
         margin-bottom: $gs-baseline*2;
     }
 }
 
-.block__image {
-    margin-bottom: $gs-baseline;
-    width: 100%;
+.block__icon {
+    position: absolute;
+    top: 5px;
+    right: $gs-gutter/2;
+}
+
+.block__icon + .block__title {
+    padding-right: $gs-gutter*2;
 }
 
 .block__info {
-    padding-left: $gs-gutter/2;
-    padding-right: $gs-gutter/2;
-    margin-bottom: $gs-baseline;
-
     @include mq(tablet) {
-        padding-bottom: $gs-baseline*5;
+        padding-bottom: $gs-baseline*3;
     }
 }
 
 .block__list {
+    font-size: 16px;
+    line-height: 20px;
     list-style: none;
+    margin-bottom: $gs-baseline;
     padding-left: $gs-gutter;
 }
 
@@ -47,32 +65,108 @@
     width: 12px;
 }
 
-.block__buttons {
-    padding-left: $gs-gutter/2;
-    padding-bottom: $gs-baseline*2;
-
+.block__footer {
     @include mq(tablet) {
         position: absolute;
-        bottom: 0;
-        padding-top: $gs-baseline;
+        bottom: $gs-baseline;
+    }
+}
+
+.block--primary {
+    @include mq(tablet) {
+        .block__title {
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        .block__info {
+            padding-bottom: $gs-baseline*24;
+        }
+
+        .block__list {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .block__footer {
+            bottom: $gs-baseline*21.5;
+        }
+    }
+}
+
+.block--digital {
+    @include mq(tablet) {
+        background-image: url(../img/digital_pack_international.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+.block--weekly {
+    @include mq(tablet) {
+        background-image: url(../img/guardian_weekly_international.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+.membership-promo {
+    background-color: $c-white;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    @include mq(tablet) {
+        background-color: $c-membership;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
-    // TODO: will become global style
-    .button {
-        font-size: 14px;
-        line-height: 36px;
-        padding-left: $gs-gutter;
-        padding-right: $gs-gutter/4;
-        min-width: 160px;
+    .block {
+        background: $c-brand url(../img/membership_small.jpg) no-repeat;
+        @include box-shadow(none);
+        color: $c-white;
+        height: 240px;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
-        &:after {
-            background-image: url(../img/arrow.png);
-            background-repeat: no-repeat;
-            content: '';
-            float: right;
-            height: 18px;
-            margin: 7px 0 0 $gs-gutter;
-            width: 20px;
+        @include mq(tablet) {
+            background: $c-brand url(../img/membership.jpg) no-repeat;
+            height: 300px;
+            margin-left: -$gs-gutter;
+            margin-right: -$gs-gutter;
+            padding-left: $gs-gutter;
+            padding-right: $gs-gutter;
         }
+    }
+
+    .block__title {
+        color: inherit;
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .block__info {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 900;
+        padding-bottom: $gs-baseline*1.5;
+
+        @include mq(tablet) {
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        .action {
+            color: $c-membership;
+        }
+    }
+
+    .block__footer  {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .button {
+        @include button-colour($c-membership-dark, $c-white, $c-membership-darker);
     }
 }

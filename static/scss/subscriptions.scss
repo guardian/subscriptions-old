@@ -86,13 +86,7 @@
         display: inline-block;
         width: 100%;
         &:after {
-            background-image: url(../img/arrow.png);
-            background-repeat: no-repeat;
-            content: '';
-            float: right;
-            height: 18px;
-            margin: 7px 0 0 30px;
-            width: 20px;
+            @include icon-arrow;
         }
     }
 }
