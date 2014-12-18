@@ -64,7 +64,7 @@
     background-color: $c-brand;
 
     @include mq(tablet) {
-        background-image: url(../img/delivery_pack.png);
+        background-image: url(../img/delivery-pack.png);
         background-position: right;
         background-size: 60%;
         background-repeat: no-repeat;

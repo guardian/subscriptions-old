@@ -96,7 +96,7 @@
 
 .block--digital {
     @include mq(tablet) {
-        background-image: url(../img/digital_pack_international.png);
+        background-image: url(../img/digital-pack-int.png);
         background-position: bottom right;
         background-repeat: no-repeat;
     }
@@ -104,7 +104,7 @@
 
 .block--weekly {
     @include mq(tablet) {
-        background-image: url(../img/guardian_weekly_international.png);
+        background-image: url(../img/guardian-weekly-int.png);
         background-position: bottom right;
         background-repeat: no-repeat;
     }
@@ -144,7 +144,7 @@
     }
 
     .block {
-        background: $c-brand url(../img/membership_small.jpg) no-repeat;
+        background: $c-brand url(../img/membership-small.jpg) no-repeat;
         @include box-shadow(none);
         color: $c-white;
         height: 240px;

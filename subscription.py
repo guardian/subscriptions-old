@@ -16,7 +16,7 @@ class LandingPage(webapp2.RequestHandler):
         if legacy_offer_key:
             self.redirect('/', permanent=True)
         else:
-            template = jinja_environment.get_template('landing_page.html')
+            template = jinja_environment.get_template('landing-page.html')
             self.response.out.write(template.render())
 
 class InternationalPage(webapp2.RequestHandler):
