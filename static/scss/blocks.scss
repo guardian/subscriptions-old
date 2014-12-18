@@ -110,6 +110,28 @@
     }
 }
 
+.block--two-col {
+    @include mq(tablet) {
+        .block__icon {
+            left: $gs-gutter/4;
+            top: $gs-baseline*2.5;
+        }
+
+        .block__title {
+            float: left;
+        }
+
+        .block__info {
+            margin-left: 50%;
+            margin-top: $gs-baseline/4;
+        }
+
+        .block__footer {
+            left: 50%;
+        }
+    }
+}
+
 .membership-promo {
     background-color: $c-white;
     margin-top: -10px;
