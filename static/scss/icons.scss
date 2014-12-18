@@ -1,14 +1,14 @@
 
 /* PNGs for now */
 .icon-logo {
-    background-image: url(../img/icon-logo_small.png);
+    background-image: url(/static/img/icon-logo_small.png);
     display: inline-block;
     height: 32px;
     margin-top: $gs-baseline/2;
     width: 162px;
 
     @include mq(tablet) {
-        background-image: url(../img/icon-logo.png);
+        background-image: url(/static/img/icon-logo.png);
         height: 62px;
         width: 320px;
         margin-top: $gs-baseline*.75;
@@ -17,7 +17,7 @@
 }
 
 .icon-arrow-up {
-    background-image: url(../img/icon-arrow-up.png);
+    background-image: url(/static/img/icon-arrow-up.png);
     background-position: center 10px;
     background-repeat: no-repeat;
     border: 1px solid #fff;
@@ -31,7 +31,7 @@
 
 // TODO: Revert to class
 @mixin icon-arrow {
-    background-image: url(../img/icon-arrow.png);
+    background-image: url(/static/img/icon-arrow.png);
     background-repeat: no-repeat;
     content: '';
     float: right;
@@ -41,7 +41,7 @@
 }
 
 .icon-email {
-    background-image: url(../img/icon-email.png);
+    background-image: url(/static/img/icon-email.png);
     display: block;
     height: 28px;
     width: 28px;
