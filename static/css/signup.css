@@ -55,6 +55,11 @@
     font-weight: normal;
 }
 
+.wrapper #digital_pack h2 small {
+    font-size: 20px;
+    margin-left: -2px;
+}
+
 @media (min-width: 30em) {
     .wrapper #digital_pack h2 {
         font-size: 38px;
