@@ -5,19 +5,6 @@
     @include box-shadow(0 1px $c-brand inset);
     padding: $gs-baseline/2 $gs-gutter/4 $gs-baseline;
     position: relative;
-
-    // TODO: will become global style
-    .button {
-        font-size: 14px;
-        line-height: 36px;
-        padding-left: $gs-gutter;
-        padding-right: $gs-gutter/4;
-        min-width: 160px;
-
-        &:after {
-            @include icon-arrow;
-        }
-    }
 }
 
 .block__title {

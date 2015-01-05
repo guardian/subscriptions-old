@@ -94,3 +94,16 @@ body {
         line-height: 46px;
     }
 }
+
+// TODO: will become global style
+.button--arrow {
+    font-size: 14px;
+    line-height: 36px;
+    padding-left: $gs-gutter;
+    padding-right: $gs-gutter/4;
+    min-width: 160px;
+
+    &:after {
+        @include icon-arrow;
+    }
+}

@@ -27,7 +27,25 @@ class InternationalPage(webapp2.RequestHandler):
         template = jinja_environment.get_template('international.html')
         self.response.out.write(template.render())
 
+class DigitalPackUK(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('digital-pack-uk.html')
+        self.response.out.write(template.render())
+
+class DigitalPackUS(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('digital-pack-us.html')
+        self.response.out.write(template.render())
+
+class DigitalPackAus(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('digital-pack-aus.html')
+        self.response.out.write(template.render())
+
 app = webapp2.WSGIApplication([
+    ('/digitalpack', DigitalPackUK),
+    ('/digitalpackus', DigitalPackUS),
+    ('/digitalpackaus', DigitalPackAus),
     ('/international', InternationalPage),
     ('/', LandingPage),
     ('/(.*?)', LandingPage),
