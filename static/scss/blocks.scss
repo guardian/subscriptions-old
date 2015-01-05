@@ -101,11 +101,13 @@
     @include mq(tablet) {
         .block__icon {
             left: $gs-gutter/4;
-            top: $gs-baseline*2.5;
+            top: $gs-baseline*3;
         }
 
         .block__title {
             float: left;
+            font-size: 28px;
+            line-height: 32px;
         }
 
         .block__info {

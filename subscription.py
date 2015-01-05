@@ -8,7 +8,7 @@ import webapp2
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
-class LandingPage(webapp2.RequestHandler):
+class SubscriptionsUK(webapp2.RequestHandler):
     def __init__(self, request, response):
         self.initialize(request, response)
 
@@ -16,15 +16,17 @@ class LandingPage(webapp2.RequestHandler):
         if legacy_offer_key:
             self.redirect('/', permanent=True)
         else:
-            template = jinja_environment.get_template('landing-page.html')
+            template = jinja_environment.get_template('subscriptions-uk.html')
             self.response.out.write(template.render())
 
-class InternationalPage(webapp2.RequestHandler):
-    def __init__(self, request, response):
-        self.initialize(request, response)
-
+class SubscriptionsUS(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('international.html')
+        template = jinja_environment.get_template('subscriptions-us.html')
+        self.response.out.write(template.render())
+
+class SubscriptionsAus(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('subscriptions-aus.html')
         self.response.out.write(template.render())
 
 class DigitalPackUK(webapp2.RequestHandler):
@@ -43,10 +45,11 @@ class DigitalPackAus(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
+    ('/us/digitalpack', DigitalPackUS),
+    ('/us', SubscriptionsUS),
+    ('/aus/digitalpack', DigitalPackAus),
+    ('/aus', SubscriptionsAus),
     ('/digitalpack', DigitalPackUK),
-    ('/digitalpackus', DigitalPackUS),
-    ('/digitalpackaus', DigitalPackAus),
-    ('/international', InternationalPage),
-    ('/', LandingPage),
-    ('/(.*?)', LandingPage),
+    ('/', SubscriptionsUK),
+    ('/(.*?)', SubscriptionsUK),
 ], debug=True)
