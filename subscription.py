@@ -24,9 +24,9 @@ class SubscriptionsUS(webapp2.RequestHandler):
         template = jinja_environment.get_template('subscriptions-us.html')
         self.response.out.write(template.render())
 
-class SubscriptionsAus(webapp2.RequestHandler):
+class SubscriptionsAu(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('subscriptions-aus.html')
+        template = jinja_environment.get_template('subscriptions-au.html')
         self.response.out.write(template.render())
 
 class DigitalPackUK(webapp2.RequestHandler):
@@ -39,16 +39,16 @@ class DigitalPackUS(webapp2.RequestHandler):
         template = jinja_environment.get_template('digital-pack-us.html')
         self.response.out.write(template.render())
 
-class DigitalPackAus(webapp2.RequestHandler):
+class DigitalPackAu(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('digital-pack-aus.html')
+        template = jinja_environment.get_template('digital-pack-au.html')
         self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/us/digitalpack', DigitalPackUS),
     ('/us', SubscriptionsUS),
-    ('/aus/digitalpack', DigitalPackAus),
-    ('/aus', SubscriptionsAus),
+    ('/au/digitalpack', DigitalPackAu),
+    ('/au', SubscriptionsAu),
     ('/digitalpack', DigitalPackUK),
     ('/', SubscriptionsUK),
     ('/(.*?)', SubscriptionsUK),
