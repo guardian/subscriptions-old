@@ -29,8 +29,7 @@
     vertical-align: middle;
 }
 
-// TODO: Revert to class
-@mixin icon-arrow {
+.icon-arrow {
     background-image: url(/static/img/icon-arrow.png);
     background-repeat: no-repeat;
     content: '';

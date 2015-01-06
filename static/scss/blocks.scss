@@ -67,7 +67,7 @@
         }
 
         .block__info {
-            padding-bottom: $gs-baseline*24;
+            padding-bottom: $gs-baseline*24.5;
         }
 
         .block__list {
@@ -76,14 +76,30 @@
         }
 
         .block__footer {
-            bottom: $gs-baseline*21.5;
+            bottom: $gs-baseline*22;
         }
+    }
+}
+
+.block--paper {
+    @include mq(tablet) {
+        background-image: url(/static/img/bg-paper-only.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+.block--paper-digital {
+    @include mq(tablet) {
+        background-image: url(/static/img/bg-paper-digital.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
     }
 }
 
 .block--digital {
     @include mq(tablet) {
-        background-image: url(/static/img/digital-pack-int.png);
+        background-image: url(/static/img/bg-digital-pack.png);
         background-position: bottom right;
         background-repeat: no-repeat;
     }
@@ -91,7 +107,7 @@
 
 .block--weekly {
     @include mq(tablet) {
-        background-image: url(/static/img/guardian-weekly-int.png);
+        background-image: url(/static/img/bg-guardian-weekly.png);
         background-position: bottom right;
         background-repeat: no-repeat;
     }
@@ -133,7 +149,7 @@
     }
 
     .block {
-        background: $c-brand url(/static/img/membership-small.jpg) no-repeat;
+        background: $c-brand url(/static/img/bg-membership-small.jpg) no-repeat;
         @include box-shadow(none);
         color: $c-white;
         height: 240px;
@@ -141,7 +157,7 @@
         padding-bottom: 10px;
 
         @include mq(tablet) {
-            background: $c-brand url(/static/img/membership.jpg) no-repeat;
+            background: $c-brand url(/static/img/bg-membership.jpg) no-repeat;
             height: 300px;
             margin-left: -$gs-gutter;
             margin-right: -$gs-gutter;
