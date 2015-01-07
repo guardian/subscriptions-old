@@ -1,12 +1,21 @@
-import os
-
 import jinja2
-from jinja2.exceptions import TemplateNotFound
+import os
 import webapp2
 
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
+
+
+class SimpleTemplate(webapp2.RequestHandler):
+    template_path = ''
+
+    def get(self):
+        if self.template_path:
+            template = jinja_environment.get_template(self.template_path)
+            self.response.out.write(template.render())
+        else:
+            raise jinja2.exceptions.TemplateNotFound
 
 class SubscriptionsUK(webapp2.RequestHandler):
     def __init__(self, request, response):
@@ -19,30 +28,21 @@ class SubscriptionsUK(webapp2.RequestHandler):
             template = jinja_environment.get_template('subscriptions-uk.html')
             self.response.out.write(template.render())
 
-class SubscriptionsUS(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('subscriptions-us.html')
-        self.response.out.write(template.render())
+class SubscriptionsUS(SimpleTemplate):
+    template_path = 'subscriptions-us.html'
 
-class SubscriptionsAu(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('subscriptions-au.html')
-        self.response.out.write(template.render())
+class SubscriptionsAu(SimpleTemplate):
+    template_path = 'subscriptions-au.html'
 
-class DigitalPackUK(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('digital-pack-uk.html')
-        self.response.out.write(template.render())
+class DigitalPackUK(SimpleTemplate):
+    template_path = 'digital-pack-uk.html'
 
-class DigitalPackUS(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('digital-pack-us.html')
-        self.response.out.write(template.render())
+class DigitalPackUS(SimpleTemplate):
+    template_path = 'digital-pack-us.html'
 
-class DigitalPackAu(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('digital-pack-au.html')
-        self.response.out.write(template.render())
+class DigitalPackAu(SimpleTemplate):
+    template_path = 'digital-pack-au.html'
+
 
 app = webapp2.WSGIApplication([
     ('/us/digitalpack', DigitalPackUS),
