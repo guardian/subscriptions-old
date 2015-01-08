@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Digital Pack {% if edition.id != 'uk' %}| {{ edition.name }} {% endif %}| The Guardian{% endblock %}
+{% block title %}Digital Pack {% if edition.id != 'uk' %}- {{ edition.name }} {% endif %}| Subscriptions | The Guardian{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="/static/css/signup.css"/>
@@ -25,7 +25,7 @@
                                 <h3>The Guardian digital pack</h3>
                                 <ul>
                                     <li><span>Includes access to the {% if edition.id != 'uk' %}UK{% endif %} daily Android, Kindle Fire and iPad editions</span></li>
-                                    <li><span>Includes access to our premium mobile app for Android and iOS {% if edition.id != 'uk' %}(including {{ edition.name }} edition){% endif %}</span></li>
+                                    <li><span>Includes access to our Guardian App Premium Tier for Android and iOS {% if edition.id != 'uk' %}(including {{ edition.name }} edition){% endif %}</span></li>
                                     <li><span>Share your subscription on up to 10 devices</span></li>
                                     <li><span>Includes Sunday's Observer, with supplements</span></li>
                                 </ul>
@@ -45,7 +45,7 @@
                             <li class="cost">
                                 <img src="/static/img/signup/icon-price.png">
                                 {% if edition.id == 'uk' %}
-                                    <span>From £11.99 per month (Save up to 76%)</span>
+                                    <span>From £11.99 per month (Save up to 75%)</span>
                                 {% elif edition.id == 'us' %}
                                     <span>From $19.99 per month (Save up to 70%)</span>
                                 {% elif edition.id == 'au' %}
@@ -62,7 +62,7 @@
                             </li>
                             <li class="premium">
                                 <img src="/static/img/signup/icon-premium.png">
-                                <span>Premium mobile app</span>
+                                <span>Guardian App Premium Tier</span>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +77,7 @@
                             <div class="pack-list">
                                 <ul>
                                     <li><span>Access to the complete daily edition, every morning from 4am</span></li>
-                                    <li><span>All the Guardian and Observer digital products in one package, including our premium mobile app, which puts breaking news, live sport and daily crosswords at your fingertips</span></li>
+                                    <li><span>All the Guardian and Observer digital products in one package, including our Guardian App Premium Tier, which puts breaking news, live sport and daily crosswords at your fingertips</span></li>
                                     <li><span>One tap and your paper is ready to enjoy offline throughout the day on your tablet or mobile device</span></li>
                                     <li><span>Enhanced, complementary audio and video content</span></li>
                                 </ul>
