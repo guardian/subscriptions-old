@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Subscriptions | Australia | The Guardian{% endblock %}
+{% block title %}Subscriptions | {{ edition.name }} | The Guardian{% endblock %}
 
 {% block content %}
 <div class="gs-container">
@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="block__footer">
-                <a class="button button--large button--primary button--arrow" href="/au/digitalpack">Subscribe now</a>
+                <a class="button button--large button--primary button--arrow" href="/{{ edition.id }}/digitalpack">Subscribe now</a>
             </div>
         </div>
         <div class="row__item block block--primary block--weekly">
