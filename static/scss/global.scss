@@ -10,6 +10,10 @@ body {
 .global-header {
     background-color: $c-brand;
     text-align: right;
+
+    a {
+        border: none;
+    }
 }
 
 .global-header__nav {
@@ -50,6 +54,7 @@ body {
     }
 
     .action {
+        border: none;
         color: $c-white;
         font-size: 14px;
         text-decoration: none;
@@ -65,6 +70,8 @@ body {
 
     a {
         color: inherit;
+        border: none;
+        text-decoration: underline;
     }
 
     .really-serious-copyright {
@@ -95,12 +102,31 @@ body {
     }
 }
 
+.page-header__lead {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: $gs-baseline*1.5;
+
+    @include mq(tablet) {
+        font-size: 22px;
+        line-height: 26px;
+        width: gs-span(10);
+    }
+}
+
+.page-heading {
+    font-size: 24px;
+    line-height: 28px;
+}
+
 .button--large {
+    cursor: pointer;
     font-size: 14px;
     line-height: 36px;
+    min-width: 160px;
     padding-left: $gs-gutter;
     padding-right: $gs-gutter/4;
-    min-width: 160px;
+    text-align: left;
 
     &:after {
         @extend .icon-arrow;

@@ -35,6 +35,12 @@
     }
 }
 
+.mobile-only {
+    @include mq(tablet) {
+        display: none !important;
+    }
+}
+
 .break {
     display: block;
 }

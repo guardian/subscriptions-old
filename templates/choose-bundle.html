@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+{% block title %}Choose your bundle | Subscriptions | The Guardian{% endblock %}
+
+{% block content %}
+<div class="gs-container">
+    <div class="page-header">
+        <h1 class="page-header__title">{{ bundle.name }}</h1>
+        {% if bundle.package == 'paper-digital' %}
+            {% if bundle.method == 'collection' %}
+                <p class="page-header__lead">You can download your digital version immediately after completing your order, but you get your paper version via our voucher scheme.</p>
+            {% else %}
+                <p class="page-header__lead">You can download your digital version immediately after completing your order, but you get your paper version delivered direct to your door.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div class="row row--items-1">
+        <div class="row__item">
+            {% if bundle.method == 'collection' %}
+                <h2 class="page-heading">This is how the voucher scheme works</h2>
+            {% else %}
+                <h2 class="page-heading">This is how direct delivery works</h2>
+            {% endif %}
+            <ol class="steps">
+                {% if bundle.method == 'collection' %}
+                    <li class="steps__item">Choose here which papers you want to get</li>
+                    <li class="steps__item">We send you personalised and dated vouchers in the post</li>
+                    <li class="steps__item">Redeem each voucher at your local retails &mdash; and enjoy!</li>
+                {% else %}
+                    <li class="steps__item">Choose here which papers you want to get</li>
+                    <li class="steps__item">Confirm your address is within the M25 when you check out</li>
+                    <li class="steps__item">We deliver to your door by 7am Monday to Saturday and 8:30 on Sundays</li>
+                {% endif %}
+            </ol>
+        </div>
+    </div>
+    <div class="row row--items-1">
+        <div class="row__item">
+            {% if bundle.method == 'collection' %}
+                <h3 class="mobile-only">Do you live inside the M25?</h3>
+                <a href="#" class="button button--large button--primary button--m25"><span class="hidden-mobile">Do you live inside the M25?</span> Get the paper delivered <span class="hidden-mobile">to your door</span></a>
+            {% else %}
+                <h3 class="mobile-only">Live outside the M25?</h3>
+                <a href="#" class="button button--large button--primary button--m25"><span class="hidden-mobile">Live outside the M25?</span> Subscribe to <span class="hidden-mobile">our</span> voucher scheme</a>
+            {% endif %}
+            <h2 class="page-heading">Choose a package</h2>
+            <form action="" method="post">
+                {% if bundle.method == 'collection' %}
+                    {% if bundle.package == 'paper-digital' %}
+                        <ul class="u-unstyled-list">
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="everyday" value="collection-paper-digital-everyday" checked>
+                                <label class="bundle__info" for="everyday">
+                                    <span class="bundle__title">EVERYDAY+</span>, <strong class="bundle__price">£10.99 per week &mdash; save 52%</strong>
+                                    <span class="bundle__description">Guardian and Observer papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£47.62</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sixday" value="collection-paper-digital-sixday">
+                                <label class="bundle__info" for="sixday">
+                                    <span class="bundle__title">SIXDAY+</span>, <strong class="bundle__price">£9.99 per week &mdash; save 50%</strong>
+                                    <span class="bundle__description">Guardian papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£43.29</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="weekend" value="collection-paper-digital-weekend">
+                                <label class="bundle__info" for="weekend">
+                                    <span class="bundle__title">WEEKEND+</span>, <strong class="bundle__price">£5.99 per week &mdash; save 60%</strong>
+                                    <span class="bundle__description">Saturday Guardian and Observer papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£25.96</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sunday" value="collection-paper-digital-sunday">
+                                <label class="bundle__info" for="sunday">
+                                    <span class="bundle__title">SUNDAY+</span>, <strong class="bundle__price">£4.99 per week &mdash; save 60%</strong>
+                                    <span class="bundle__description">Observer paper, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£21.62</strong></span>
+                                </label>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul class="u-unstyled-list">
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="everyday" value="collection-paper-everyday" checked>
+                                <label class="bundle__info" for="everyday">
+                                    <span class="bundle__title">EVERYDAY</span>, <strong class="bundle__price">£9.99 per week &mdash; save 25%</strong>
+                                    <span class="bundle__description">Guardian and Observer papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£43.29</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sixday" value="collection-paper-sixday">
+                                <label class="bundle__info" for="sixday">
+                                    <span class="bundle__title">SIXDAY</span>, <strong class="bundle__price">£8.49 per week &mdash; save 19%</strong>
+                                    <span class="bundle__description">Guardian papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£36.79</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="weekend" value="collection-paper-weekend">
+                                <label class="bundle__info" for="weekend">
+                                    <span class="bundle__title">WEEKEND</span>, <strong class="bundle__price">£4.49 per week &mdash; save 17%</strong>
+                                    <span class="bundle__description">Saturday Guardian and Observer papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£19.46</strong></span>
+                                </label>
+                            </li>
+                        </ul>
+                    {% endif %}
+                {% else %}
+                    {% if bundle.package == 'paper-digital' %}
+                        <ul class="u-unstyled-list">
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="everyday" value="delivery-paper-digital-everyday" checked>
+                                <label class="bundle__info" for="everyday">
+                                    <span class="bundle__title">EVERYDAY+</span>, <strong class="bundle__price">£14.99 per week</strong>
+                                    <span class="bundle__description">Guardian and Observer papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£64.96</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sixday" value="delivery-paper-digital-sixday">
+                                <label class="bundle__info" for="sixday">
+                                    <span class="bundle__title">SIXDAY+</span>, <strong class="bundle__price">£12.99 per week</strong>
+                                    <span class="bundle__description">Guardian papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£56.29</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="weekend" value="delivery-paper-digital-weekend">
+                                <label class="bundle__info" for="weekend">
+                                    <span class="bundle__title">WEEKEND+</span>, <strong class="bundle__price">£7.99 per week</strong>
+                                    <span class="bundle__description">Saturday Guardian and Observer papers, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£34.62</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sunday" value="delivery-paper-digital-sunday">
+                                <label class="bundle__info" for="sunday">
+                                    <span class="bundle__title">SUNDAY+</span>, <strong class="bundle__price">£5.99 per week</strong>
+                                    <span class="bundle__description">Observer paper, plus tablet editions and Premium mobile access</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£25.96</strong></span>
+                                </label>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul class="u-unstyled-list">
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="everyday" value="delivery-paper-everyday" checked>
+                                <label class="bundle__info" for="everyday">
+                                    <span class="bundle__title">EVERYDAY</span>, <strong class="bundle__price">£13.99 per week</strong>
+                                    <span class="bundle__description">Guardian and Observer papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£60.62</strong></span>
+
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="sixday" value="delivery-paper-sixday">
+                                <label class="bundle__info" for="sixday">
+                                    <span class="bundle__title">SIXDAY</span>, <strong class="bundle__price">£11.49 per week</strong>
+                                    <span class="bundle__description">Guardian papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£49.79</strong></span>
+                                </label>
+                            </li>
+                            <li class="bundle">
+                                <input class="bundle__select" type="radio" name="bundle" id="weekend" value="delivery-paper-weekend">
+                                <label class="bundle__info" for="weekend">
+                                    <span class="bundle__title">WEEKEND</span>, <strong class="bundle__price">£6.49 per week</strong>
+                                    <span class="bundle__description">Saturday Guardian and Observer papers</span>
+                                    <span class="bundle__monthly">Monthly price <strong>£28.12</strong></span>
+                                </label>
+                            </li>
+                        </ul>
+                    {% endif %}
+                {% endif %}
+                <button class="button button--large button--primary">Continue</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+    <p>For help with Guardian and Observer subscription services please see our <a href="http://www.theguardian.com/subscriber-direct/subscription-frequently-asked-questions" title="Frequently Asked Questions">Frequently Asked Questions</a>.</p>
+{% endblock %}
