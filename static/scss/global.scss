@@ -110,13 +110,14 @@ body {
     @include mq(tablet) {
         font-size: 22px;
         line-height: 26px;
-        width: gs-span(10);
+        max-width: gs-span(10);
     }
 }
 
 .page-heading {
     font-size: 24px;
     line-height: 28px;
+    margin-bottom: $gs-baseline;
 }
 
 .button--large {

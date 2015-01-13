@@ -1,8 +1,17 @@
 
 /* Bundles */
 .bundle {
-    margin-top: $gs-baseline*2;
+    background-color: $c-neutral7;
+    margin-bottom: $gs-baseline;
+    position: relative;
+}
+
+.bundle__list {
     margin-bottom: $gs-baseline*2;
+
+    @include mq(tablet) {
+        margin-top: $gs-baseline*3;
+    }
 }
 
 .bundle__title {
@@ -12,14 +21,38 @@
 }
 
 .bundle__select {
-    float: left;
-    margin-top: 7px;
+    position: absolute;
+    top: $gs-baseline*1.25;
+    left: $gs-gutter/2;
+
+    @include mq(tablet) {
+        left: $gs-gutter;
+    }
+}
+
+.bundle__select:checked + .bundle__info {
+    background-color: #84be43;
+    color: $c-white;
 }
 
 .bundle__info {
-    display: block;
-    margin-left: $gs-gutter*2;
     cursor: pointer;
+    display: block;
+    padding: $gs-baseline $gs-gutter $gs-baseline $gs-gutter*2;
+
+    @include mq(tablet) {
+        padding-left: $gs-gutter*3;
+    }
+}
+
+.bundle__price {
+    display: block;
+
+    @include mq(tablet) {
+        float: right;
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 
 .bundle__description,
@@ -37,11 +70,11 @@
 
 /* Steps */
 $step-size: 40px;
+$step-size-tablet: 60px;
 
 .steps {
     @extend .inline-list;
     counter-reset: li;
-    margin-top: $gs-baseline;
 
     @include mq(tablet) {
         margin-bottom: $gs-baseline;
@@ -53,12 +86,14 @@ $step-size: 40px;
     margin-bottom: $gs-baseline/2;
     min-height: $step-size + $gs-baseline/2;
     padding-left: $step-size + $gs-gutter/2;
-    padding-right: $gs-gutter/4;
+    padding-right: $gs-gutter/2;
     position: relative;
 
     @include mq(tablet) {
         width: 33%;
         vertical-align: top;
+        min-height: $step-size-tablet + $gs-baseline/2;
+        padding-left: $step-size-tablet + $gs-gutter/2;
     }
 
     &:before {
@@ -68,7 +103,7 @@ $step-size: 40px;
         counter-increment: li;
         display: block;
         float: left;
-        font-weight: 900;
+        font-weight: 500;
         line-height: $step-size;
         text-align: center;
         position: absolute;
@@ -77,5 +112,13 @@ $step-size: 40px;
         @include border-radius($step-size);
         height: $step-size;
         width: $step-size;
+
+        @include mq(tablet) {
+            font-size: 32px;
+            line-height: $step-size-tablet;
+            @include border-radius($step-size-tablet);
+            height: $step-size-tablet;
+            width: $step-size-tablet;
+        }
     }
 }
