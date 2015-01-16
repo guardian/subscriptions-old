@@ -29,14 +29,19 @@
     vertical-align: middle;
 }
 
-.icon-arrow {
-    background-image: url(/static/img/icon-arrow.png);
+.icon-arrow-white {
+    background-image: url(/static/img/icon-arrow-white.png);
     background-repeat: no-repeat;
     content: '';
     float: right;
     height: 18px;
     margin: 8px 0 0 $gs-gutter;
     width: 20px;
+}
+
+.icon-arrow-blue {
+    @extend .icon-arrow-white;
+    background-image: url(/static/img/icon-arrow-blue.png);
 }
 
 .icon-email {

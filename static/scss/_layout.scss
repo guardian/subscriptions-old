@@ -33,6 +33,11 @@ body {
     }
 }
 
+.row--border {
+    border-top: 1px solid $c-neutral5;
+    padding-top: 8px;
+}
+
 .row__item {
     margin-bottom: 10px;
 

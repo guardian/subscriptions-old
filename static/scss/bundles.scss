@@ -65,6 +65,8 @@
 
     @include mq(tablet) {
         float: right;
+        margin-right: 0;
+        margin-top: 2px;
     }
 }
 

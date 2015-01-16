@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Choose your bundle | Subscriptions | The Guardian{% endblock %}
+{% block title %}Choose a Package | {{ bundle.name }} {{ bundle.method }} | Subscriptions | The Guardian{% endblock %}
 
 {% block content %}
 <div class="gs-container">
@@ -14,7 +14,7 @@
             {% endif %}
         {% endif %}
     </div>
-    <div class="row row--items-1">
+    <div class="row row--items-1 row--border">
         <div class="row__item">
             {% if bundle.method == 'collection' %}
                 <h2 class="page-heading">This is how the voucher scheme works</h2>
@@ -25,7 +25,7 @@
                 {% if bundle.method == 'collection' %}
                     <li class="steps__item">Choose here which papers you want to get</li>
                     <li class="steps__item">We send you personalised and dated vouchers in the post</li>
-                    <li class="steps__item">Redeem each voucher at your local retails &mdash; and enjoy!</li>
+                    <li class="steps__item">Redeem each voucher at your local retailer &mdash; and enjoy!</li>
                 {% else %}
                     <li class="steps__item">Choose here which papers you want to get</li>
                     <li class="steps__item">Confirm your address is within the M25 when you check out</li>
@@ -34,14 +34,14 @@
             </ol>
         </div>
     </div>
-    <div class="row row--items-1">
+    <div class="row row--items-1 row--border">
         <div class="row__item">
             {% if bundle.method == 'collection' %}
                 <h3 class="mobile-only">Do you live inside the M25?</h3>
-                <a href="/delivery/{{ bundle.package }}" class="button button--large button--primary button--m25"><span class="hidden-mobile">Do you live inside the M25?</span> Get the paper delivered <span class="hidden-mobile">to your door</span></a>
+                <a href="/delivery/{{ bundle.package }}" class="button button--large button--secondary button--m25"><span class="hidden-mobile">Do you live inside the M25?</span> Get the paper delivered <span class="hidden-mobile">to your door</span></a>
             {% else %}
                 <h3 class="mobile-only">Live outside the M25?</h3>
-                <a href="/collection/{{ bundle.package }}" class="button button--large button--primary button--m25"><span class="hidden-mobile">Live outside the M25?</span> Subscribe to <span class="hidden-mobile">our</span> voucher scheme</a>
+                <a href="/collection/{{ bundle.package }}" class="button button--large button--secondary button--m25"><span class="hidden-mobile">Live outside the M25?</span> Subscribe to <span class="hidden-mobile">our</span> voucher scheme</a>
             {% endif %}
             <h2 class="page-heading">Choose a package</h2>
             <form action="" method="post">

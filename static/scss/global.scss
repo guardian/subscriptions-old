@@ -130,6 +130,23 @@ body {
     text-align: left;
 
     &:after {
-        @extend .icon-arrow;
+        @extend .icon-arrow-white;
+    }
+}
+
+.button--secondary {
+    background-color: transparent;
+    border: 1px solid rgba($c-brand, 0.3);
+    color: $c-brand;
+
+    &:after {
+        @extend .icon-arrow-blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+        border-color: $c-brand;
     }
 }
