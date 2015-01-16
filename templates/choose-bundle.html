@@ -7,10 +7,12 @@
     <div class="page-header">
         <h1 class="page-header__title">{{ bundle.name }}</h1>
         {% if bundle.package == 'paper-digital' %}
+            <p class="page-header__lead">Enjoy your package whenever and wherever you want. Plus you can start using the daily edition and live news app immediately.</p>
+        {% else %}
             {% if bundle.method == 'collection' %}
-                <p class="page-header__lead">You can download your digital version immediately after completing your order, but you get your paper version via our voucher scheme.</p>
+                <p class="page-header__lead">Get the Guardian and Observer with our voucher scheme.</p>
             {% else %}
-                <p class="page-header__lead">You can download your digital version immediately after completing your order, but you get your paper version delivered direct to your door.</p>
+                <p class="page-header__lead">The Guardian and Observer newspapers, including all your favourite supplements delivered direct to your door.</p>
             {% endif %}
         {% endif %}
     </div>
@@ -23,13 +25,13 @@
             {% endif %}
             <ol class="steps">
                 {% if bundle.method == 'collection' %}
-                    <li class="steps__item">Choose here which papers you want to get</li>
-                    <li class="steps__item">We send you personalised and dated vouchers in the post</li>
-                    <li class="steps__item">Redeem each voucher at your local retailer &mdash; and enjoy!</li>
+                    <li class="steps__item">Pick the perfect package for you</li>
+                    <li class="steps__item">We'll send personalised vouchers direct to your door</li>
+                    <li class="steps__item">Use your vouchers to redeem your papers at over 1,000 retailers across the UK</li>
                 {% else %}
-                    <li class="steps__item">Choose here which papers you want to get</li>
-                    <li class="steps__item">Confirm your address is within the M25 when you check out</li>
-                    <li class="steps__item">We deliver to your door by 7am Monday to Saturday and 8:30 on Sundays</li>
+                    <li class="steps__item">Pick the perfect package for you</li>
+                    <li class="steps__item">Confirm your address is within the M25</li>
+                    <li class="steps__item">Get your papers delivered to your door by 7am Monday - Saturday and 8:30am on Sundays</li>
                 {% endif %}
             </ol>
         </div>
