@@ -24,12 +24,12 @@ editions = {
     },
 }
 
-bundles = {
+packages = {
     'collection-paper-digital': {
         'method': 'collection',
         'package': 'paper-digital',
         'name': 'Paper + digital subscription',
-        'packages': {
+        'urls': {
             'everyday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx01&title=gv7&skip=1',
             'sixday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx01&title=gv6&skip=1',
             'weekend': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx01&title=gv2&skip=1',
@@ -40,7 +40,7 @@ bundles = {
         'method': 'collection',
         'package': 'paper',
         'name': 'Paper subscription',
-        'packages': {
+        'urls': {
             'everyday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx00&title=gv7&skip=1',
             'sixday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx00&title=gv6&skip=1',
             'weekend': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx00&title=gv2&skip=1',
@@ -50,7 +50,7 @@ bundles = {
         'method': 'delivery',
         'package': 'paper-digital',
         'name': 'Paper + digital subscription',
-        'packages': {
+        'urls': {
             'everyday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=EVERYDAY%2B',
             'sixday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=SIXDAY%2B',
             'weekend': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=WEEKEND%2B',
@@ -61,7 +61,7 @@ bundles = {
         'method': 'delivery',
         'package': 'paper',
         'name': 'Paper subscription',
-        'packages': {
+        'urls': {
             'everyday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=EVERYDAY',
             'sixday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=SIXDAY',
             'weekend': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=WEEKEND',
@@ -119,35 +119,35 @@ class DigitalPackAU(SimpleTemplate):
     template_path = 'digital-pack.html'
 
 
-class BundleForm(SimpleTemplate):
+class PackageForm(SimpleTemplate):
     def post(self):
-        bundle = self.request.get('bundle')
-        method, package = bundle.rsplit('-', 1)
+        package = self.request.get('package')
+        method, package = package.rsplit('-', 1)
         try:
-            url = bundles[method]['packages'][package]
+            url = packages[method]['urls'][package]
             return webapp2.redirect(url)
         except KeyError:
             return webapp2.redirect(self.request.referer)
 
 
-class CollectionDigitalPaper(BundleForm):
-    context = {'bundle': bundles['collection-paper-digital']}
-    template_path = 'choose-bundle.html'
+class CollectionDigitalPaper(PackageForm):
+    context = {'package': packages['collection-paper-digital']}
+    template_path = 'choose-package.html'
 
 
-class CollectionPaper(BundleForm):
-    context = {'bundle': bundles['collection-paper']}
-    template_path = 'choose-bundle.html'
+class CollectionPaper(PackageForm):
+    context = {'package': packages['collection-paper']}
+    template_path = 'choose-package.html'
 
 
-class DeliveryDigitalPaper(BundleForm):
-    context = {'bundle': bundles['delivery-paper-digital']}
-    template_path = 'choose-bundle.html'
+class DeliveryDigitalPaper(PackageForm):
+    context = {'package': packages['delivery-paper-digital']}
+    template_path = 'choose-package.html'
 
 
-class DeliveryPaper(BundleForm):
-    context = {'bundle': bundles['delivery-paper']}
-    template_path = 'choose-bundle.html'
+class DeliveryPaper(PackageForm):
+    context = {'package': packages['delivery-paper']}
+    template_path = 'choose-package.html'
 
 
 app = webapp2.WSGIApplication([

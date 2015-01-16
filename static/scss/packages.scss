@@ -1,12 +1,12 @@
 
-/* Bundles */
-.bundle {
+/* Packages */
+.package {
     background-color: $c-neutral7;
     margin-bottom: $gs-baseline;
     position: relative;
 }
 
-.bundle__list {
+.package__list {
     margin-bottom: $gs-baseline*2;
 
     @include mq(tablet) {
@@ -14,13 +14,13 @@
     }
 }
 
-.bundle__title {
+.package__title {
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
 }
 
-.bundle__select {
+.package__select {
     position: absolute;
     top: $gs-baseline*1.25;
     left: $gs-gutter/2;
@@ -30,12 +30,12 @@
     }
 }
 
-.bundle__select:checked + .bundle__info {
+.package__select:checked + .package__info {
     background-color: #84be43;
     color: $c-white;
 }
 
-.bundle__info {
+.package__info {
     cursor: pointer;
     display: block;
     padding: $gs-baseline $gs-gutter $gs-baseline $gs-gutter*2;
@@ -45,7 +45,7 @@
     }
 }
 
-.bundle__price {
+.package__price {
     display: block;
 
     @include mq(tablet) {
@@ -55,8 +55,8 @@
     }
 }
 
-.bundle__description,
-.bundle__monthly {
+.package__description,
+.package__monthly {
     display: block;
 }
 
