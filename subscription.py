@@ -120,6 +120,8 @@ class DigitalPackAU(SimpleTemplate):
 
 
 class PackageForm(SimpleTemplate):
+    template_path = 'choose-package.html'
+
     def post(self):
         package = self.request.get('package')
         method, package = package.rsplit('-', 1)
@@ -132,22 +134,18 @@ class PackageForm(SimpleTemplate):
 
 class CollectionDigitalPaper(PackageForm):
     context = {'package': packages['collection-paper-digital']}
-    template_path = 'choose-package.html'
 
 
 class CollectionPaper(PackageForm):
     context = {'package': packages['collection-paper']}
-    template_path = 'choose-package.html'
 
 
 class DeliveryDigitalPaper(PackageForm):
     context = {'package': packages['delivery-paper-digital']}
-    template_path = 'choose-package.html'
 
 
 class DeliveryPaper(PackageForm):
     context = {'package': packages['delivery-paper']}
-    template_path = 'choose-package.html'
 
 
 app = webapp2.WSGIApplication([
