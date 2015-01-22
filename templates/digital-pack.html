@@ -11,7 +11,7 @@
                 <article>
                     <div class="content">
                         <h2>The Guardian digital pack, every day from 4am {% if edition.id != 'uk' %}<small>GMT</small>{% endif %}</h2>
-                        <a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow">Start your 14-day trial now</a>
+                        <a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow" data-test-id="digital-pack-{{ edition.id }}-trial-header">Start your 14-day trial now</a>
                     </div>
                 </article>
             </section>
@@ -40,7 +40,7 @@
                     <div class="content">
                         <h2>The offer</h2>
                         <p>Try the new Guardian digital pack free for 14 days.</p>
-                        <p><a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow">Start your 14-day trial now</a></p>
+                        <p><a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow" data-test-id="digital-pack-{{ edition.id }}-trial-offer">Start your 14-day trial now</a></p>
                         <ul>
                             <li class="cost">
                                 <img src="/static/img/signup/icon-price.png">
@@ -81,7 +81,7 @@
                                     <li><span>One tap and your paper is ready to enjoy offline throughout the day on your tablet or mobile device</span></li>
                                     <li><span>Enhanced, complementary audio and video content</span></li>
                                 </ul>
-                                <a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow">Start your 14-day trial now</a>
+                                <a href="https://www.guardiansubscriptions.co.uk/digitalsubscriptions/?prom=DGA01&CMP={{ edition.cmp }}" class="button button--large button--primary button--arrow" data-test-id="digital-pack-{{ edition.id }}-trial-why">Start your 14-day trial now</a>
                             </div>
                             <div class="image">
                                 <img src="/static/img/signup/subscribe-packshot.png" alt="">

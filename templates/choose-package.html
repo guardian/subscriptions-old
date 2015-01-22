@@ -40,10 +40,10 @@
         <div class="row__item">
             {% if package.method == 'collection' %}
                 <h3 class="mobile-only">Do you live inside the M25?</h3>
-                <a href="/delivery/{{ package.package }}" class="button button--large button--secondary button--m25"><span class="hidden-mobile">Do you live inside the M25?</span> Get the paper delivered <span class="hidden-mobile">to your door</span></a>
+                <a href="/delivery/{{ package.package }}" class="button button--large button--secondary button--m25" data-test-id="choose-package-inside-m25"><span class="hidden-mobile">Do you live inside the M25?</span> Get the paper delivered <span class="hidden-mobile">to your door</span></a>
             {% else %}
                 <h3 class="mobile-only">Live outside the M25?</h3>
-                <a href="/collection/{{ package.package }}" class="button button--large button--secondary button--m25"><span class="hidden-mobile">Live outside the M25?</span> Subscribe to <span class="hidden-mobile">our</span> voucher scheme</a>
+                <a href="/collection/{{ package.package }}" class="button button--large button--secondary button--m25" data-test-id="choose-package-outside-m25"><span class="hidden-mobile">Live outside the M25?</span> Subscribe to <span class="hidden-mobile">our</span> voucher scheme</a>
             {% endif %}
             <h2 class="page-heading">Choose a package</h2>
             <form action="" method="post">
@@ -171,7 +171,7 @@
                         {% endif %}
                     {% endif %}
                 </ul>
-                <button class="button button--large button--primary">Choose your package</button>
+                <button class="button button--large button--primary" data-test-id="choose-package-select">Choose your package</button>
             </form>
         </div>
     </div>
