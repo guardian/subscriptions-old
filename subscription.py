@@ -28,7 +28,7 @@ packages = {
     'collection-paper-digital': {
         'method': 'collection',
         'package': 'paper-digital',
-        'name': 'Paper + digital subscription',
+        'name': 'Paper + digital voucher subscription',
         'urls': {
             'everyday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx01&title=gv7&skip=1',
             'sixday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx01&title=gv6&skip=1',
@@ -39,7 +39,7 @@ packages = {
     'collection-paper': {
         'method': 'collection',
         'package': 'paper',
-        'name': 'Paper subscription',
+        'name': 'Paper voucher subscription',
         'urls': {
             'everyday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx00&title=gv7&skip=1',
             'sixday': 'https://www.guardiansubscriptions.co.uk/Voucher?prom=faa03&pkgcode=ukx00&title=gv6&skip=1',
@@ -49,7 +49,7 @@ packages = {
     'delivery-paper-digital': {
         'method': 'delivery',
         'package': 'paper-digital',
-        'name': 'Paper + digital subscription',
+        'name': 'Paper + digital home delivery subscription',
         'urls': {
             'everyday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=EVERYDAY%2B',
             'sixday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=SIXDAY%2B',
@@ -60,7 +60,7 @@ packages = {
     'delivery-paper': {
         'method': 'delivery',
         'package': 'paper',
-        'name': 'Paper subscription',
+        'name': 'Paper home delivery subscription',
         'urls': {
             'everyday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=EVERYDAY',
             'sixday': 'https://www.guardiandirectsubs.co.uk/Delivery/details.aspx?package=SIXDAY',

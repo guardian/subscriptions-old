@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ package.name|title }} {{ package.method }} | Choose a Package | Subscriptions | The Guardian{% endblock %}
+{% block title %}{{ package.name|title }} | Choose a Package | Subscriptions | The Guardian{% endblock %}
 
 {% block content %}
 <div class="gs-container">
     <div class="page-header">
         <h1 class="page-header__title">{{ package.name }}</h1>
-        {% if package.package == 'paper-digital' %}
-            <p class="page-header__lead">Enjoy your package whenever and wherever you want. Plus you can start using the daily edition and live news app immediately.</p>
-        {% else %}
-            {% if package.method == 'collection' %}
-                <p class="page-header__lead">Get the Guardian and Observer with our voucher scheme.</p>
+        {% if package.method == 'collection' %}
+            {% if package.package == 'paper-digital' %}
+                <p class="page-header__lead">Save money on your newspapers and digital content. Plus start using the daily edition and premium live news app immediately</p>
             {% else %}
-                <p class="page-header__lead">The Guardian and Observer newspapers, including all your favourite supplements delivered direct to your door.</p>
+                <p class="page-header__lead">Save money on your newspapers.</p>
+            {% endif %}
+        {% else %}
+            {% if package.package == 'paper-digital' %}
+                <p class="page-header__lead">If you live within the M25 you can have your papers delivered by 7am Monday - Saturday and 8.30am on Sunday. Plus you can start using the daily edition and premium live news app immediately.</p>
+            {% else %}
+                <p class="page-header__lead">If you live within the M25 you can have your papers delivered by 7am Monday - Saturday and 8.30 on Sunday.</p>
             {% endif %}
         {% endif %}
     </div>
@@ -26,8 +30,8 @@
             <ol class="steps">
                 {% if package.method == 'collection' %}
                     <li class="steps__item">Pick the perfect package for you</li>
-                    <li class="steps__item">We'll send personalised vouchers direct to your door</li>
-                    <li class="steps__item">Use your vouchers to redeem your papers at over 1,000 retailers across the UK</li>
+                    <li class="steps__item">We'll post personalised vouchers for the newspapers in your package</li>
+                    <li class="steps__item">Redeem your vouchers at over 1,000 retailers across the UK</li>
                 {% else %}
                     <li class="steps__item">Pick the perfect package for you</li>
                     <li class="steps__item">Confirm your address is within the M25</li>
@@ -171,7 +175,7 @@
                         {% endif %}
                     {% endif %}
                 </ul>
-                <button class="button button--large button--primary" data-test-id="choose-package-select">Choose your package</button>
+                <button class="button button--large button--primary" data-test-id="choose-package-select">Continue</button>
             </form>
         </div>
     </div>
