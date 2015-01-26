@@ -29,12 +29,12 @@
                 <ul class="block__list">
                     <li class="block__list-item">A selection of international editorial from the Guardian, Observer, Washington Post and Le Monde</li>
                     <li class="block__list-item">A unique blend of international news, politics, culture and comment</li>
-                    <li class="block__list-item"><strong>Save up to 25%</strong> on the retail price</li>
+                    <li class="block__list-item"><strong>Save up to {% if edition.id == 'us' %}23{% else %}9{% endif %}%</strong> on the retail price</li>
                     <li class="block__list-item">Free delivery to your door, wherever you are in the world</li>
                 </ul>
             </div>
             <div class="block__footer">
-                <a class="button button--large button--primary" href="https://www.myguardianweekly.co.uk/subscribe/?prom=FGA04&amp;INTCMP=dis_231550" data-test-id="subscriptions-{{ edition.id }}-guardian-weekly">Subscribe now</a>
+                <a class="button button--large button--primary" href="https://www.myguardianweekly.co.uk/subscribe/?prom=AAA14&amp;CMP=FAB_2500" data-test-id="subscriptions-{{ edition.id }}-guardian-weekly">Subscribe now</a>
             </div>
         </div>
     </div>

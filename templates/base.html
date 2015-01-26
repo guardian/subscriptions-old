@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/static/css/ie-old.min.css"/>
     <![endif]-->
     <link rel="shortcut icon" type="image/png" href="http://assets.guim.co.uk/images/favicons/32x32.ico"/>
+    <script src="//cdn.optimizely.com/js/293455139.js"></script>
 </head>
 <body>
     <div class="global-header">
@@ -44,7 +45,7 @@
     <div class="global-footer">
         <div class="gs-container">
             {% block footer %}{% endblock %}
-            <div class="really-serious-copyright">© 2014 Guardian News and Media Limited or its affiliated companies. All rights reserved</div>
+            <div class="really-serious-copyright">© 2015 Guardian News and Media Limited or its affiliated companies. All rights reserved.</div>
         </div>
     </div>
 
@@ -64,6 +65,11 @@
         s.eVar19="D=c19";
         s.prop42="Subscriber";
         s.prop47="UK";
+
+        // Optimizely integration
+        window.optimizely = window.optimizely || [];
+        window.optimizely.push("activateSiteCatalyst");
+
         var s_code=s.t();if(s_code)document.write(s_code);
     </script>
 </body>
