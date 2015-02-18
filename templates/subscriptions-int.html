@@ -66,7 +66,11 @@
                 </ul>
             </div>
             <div class="block__footer">
-                <a class="button button--large button--primary" href="https://profile.theguardian.com/email-prefs" data-test-id="subscriptions-{{ edition.id }}-email">Sign up</a>
+                {% if edition.id == 'us' %}
+                    <a class="button button--large button--primary" href="https://profile.theguardian.com/email-prefs" data-test-id="subscriptions-{{ edition.id }}-email">Sign up</a>
+                {% else %}
+                    <a class="button button--large button--primary" href="http://www.theguardian.com/info/2015/jan/30/guardian-australia-emails-delivered-to-your-inbox-subscribe-now" data-test-id="subscriptions-{{ edition.id }}-email">Sign up</a>
+                {% endif %}
             </div>
         </div>
     </div>
