@@ -8,8 +8,7 @@
 }
 
 .block__title {
-    font-size: 21px;
-    line-height: 25px;
+    @include font-size(21px, 25px);
     margin-bottom: $gs-baseline;
 
     @include mq(tablet) {
@@ -34,8 +33,7 @@
 }
 
 .block__list {
-    font-size: 16px;
-    line-height: 20px;
+    @include font-size(16px, 20px);
     list-style: none;
     margin-bottom: $gs-baseline;
     padding-left: $gs-gutter;
@@ -62,8 +60,7 @@
 .block--primary {
     @include mq(tablet) {
         .block__title {
-            font-size: 28px;
-            line-height: 32px;
+            @include font-size(28px, 32px);
         }
 
         .block__info {
@@ -71,8 +68,7 @@
         }
 
         .block__list {
-            font-size: 18px;
-            line-height: 22px;
+            @include font-size(18px, 22px);
         }
 
         .block__footer {
@@ -122,8 +118,7 @@
 
         .block__title {
             float: left;
-            font-size: 28px;
-            line-height: 32px;
+            @include font-size(28px, 32px);
         }
 
         .block__info {
@@ -168,19 +163,16 @@
 
     .block__title {
         color: inherit;
-        font-size: 28px;
-        line-height: 32px;
+        @include font-size(28px, 32px);
     }
 
     .block__info {
-        font-size: 16px;
-        line-height: 20px;
+        @include font-size(16px, 20px);
         font-weight: 900;
         padding-bottom: $gs-baseline*1.5;
 
         @include mq(tablet) {
-            font-size: 21px;
-            line-height: 25px;
+            @include font-size(21px, 25px);
         }
 
         .action {

@@ -15,8 +15,7 @@
 }
 
 .package__title {
-    font-size: 24px;
-    line-height: 28px;
+    @include font-size(24px, 28px);
     font-weight: 900;
 }
 
@@ -50,8 +49,7 @@
 
     @include mq(tablet) {
         float: right;
-        font-size: 20px;
-        line-height: 24px;
+        @include font-size(20px, 24px);
     }
 }
 
@@ -116,8 +114,7 @@ $step-size-tablet: 60px;
         width: $step-size;
 
         @include mq(tablet) {
-            font-size: 32px;
-            line-height: $step-size-tablet;
+            @include font-size(32px, $step-size-tablet);
             @include border-radius($step-size-tablet);
             height: $step-size-tablet;
             width: $step-size-tablet;

@@ -1,0 +1,26 @@
+
+/* Digital pack */
+.digital-cta {
+    text-align: center;
+    margin: $gs-baseline*2 0;
+
+    .button {
+        margin-top: $gs-baseline*2;
+    }
+}
+
+.digital-cta__price {
+    @include font-size(24px, 28px);
+}
+
+.digital-cta__amount {
+    @include font-size(42px, 46px);
+}
+
+/* Dummy */
+.digital-dummy-image {
+    background: lightgray;
+    margin-bottom: $gs-baseline*2;
+    height: 65px;
+    width: 100px;
+}

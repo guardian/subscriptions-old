@@ -119,6 +119,10 @@ class DigitalPackAU(SimpleTemplate):
     template_path = 'digital-pack.html'
 
 
+class DigitalPackNew(SimpleTemplate):
+    template_path = 'digital-pack-new.html'
+
+
 class PackageForm(SimpleTemplate):
     template_path = 'choose-package.html'
 
@@ -154,6 +158,7 @@ app = webapp2.WSGIApplication([
     ('/au/digitalpack', DigitalPackAU),
     ('/au', SubscriptionsAU),
     ('/digitalpack', DigitalPackUK),
+    ('/digital', DigitalPackNew),
     ('/collection/paper-digital', CollectionDigitalPaper),
     ('/collection/paper', CollectionPaper),
     ('/delivery/paper-digital', DeliveryDigitalPaper),
