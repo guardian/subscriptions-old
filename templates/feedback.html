@@ -6,12 +6,16 @@
 <div class="gs-container">
     <div class="page-header">
         <h1 class="page-header__title">Feedback</h1>
-        <p class="page-header__lead">Help us improve your subscriptions</p>
+        {% if sent %}
+            <p class="page-header__lead">Thank you for contacting us</p>
+        {% else %}
+            <p class="page-header__lead">Help us improve your subscriptions</p>
+        {% endif %}
     </div>
     <div class="row row--items-1">
         <div class="row__item">
             {% if sent %}
-                <p>Thank you for contacting us.</p>
+                <p><a href="/">Back to subscriptions</a>.</p>
             {% else %}
                 <p>Use the form below to send us your comments or suggestions on subscriptions. We'd like to hear it.
                 <br> We read all feedback carefully, but please note we cannot respond to all comments submitted.</p>
@@ -23,7 +27,6 @@
                 <noscript>Javascript is required to leave us feedback.</noscript>
                 <script type="text/javascript" src="/static/js/formstack.js"></script>
             {% endif %}
-
         </div>
     </div>
 </div>
