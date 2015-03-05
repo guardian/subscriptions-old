@@ -122,8 +122,6 @@
 
         .block__title {
             float: left;
-            font-size: 28px;
-            line-height: 32px;
         }
 
         .block__info {
@@ -133,6 +131,16 @@
 
         .block__footer {
             left: 50%;
+        }
+
+        &.block--primary {
+            .block__info {
+                padding-bottom: $gs-baseline*3;
+            }
+
+            .block__footer {
+                bottom: $gs-baseline;
+            }
         }
     }
 }
