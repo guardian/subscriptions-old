@@ -29,6 +29,11 @@
     display: inline-block;
 }
 
+.is-hidden,
+[hidden] {
+    display: none !important;
+}
+
 .hidden-mobile {
     @include mq($until: tablet) {
         display: none !important;

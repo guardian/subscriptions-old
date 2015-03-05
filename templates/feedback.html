@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback | Subscriptions | The Guardian{% endblock %}
+
+{% block content %}
+<div class="gs-container">
+    <div class="page-header">
+        <h1 class="page-header__title">Feedback</h1>
+        <p class="page-header__lead">Help us improve your subscriptions</p>
+    </div>
+    <div class="row row--items-1">
+        <div class="row__item">
+            {% if sent %}
+                <p>Thank you for contacting us.</p>
+            {% else %}
+                <p>Use the form below to send us your comments or suggestions on subscriptions. We'd like to hear it.
+                <br> We read all feedback carefully, but please note we cannot respond to all comments submitted.</p>
+
+                <div class="formstackForm gs-span-7 is-hidden">
+                    <script type="text/javascript" src="https://guardiannewsampampmedia.formstack.com/forms/js.php?1955048-tOfqZ3Kxj2"></script>
+                </div>
+
+                <noscript>Javascript is required to leave us feedback.</noscript>
+                <script type="text/javascript" src="/static/js/formstack.js"></script>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

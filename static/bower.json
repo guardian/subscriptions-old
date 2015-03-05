@@ -4,6 +4,7 @@
     "dependencies": {
         "guss": "3.3.0",
         "pasteup-buttons": "0.4.10",
+        "pasteup-forms": "5.0.7",
         "pasteup-palette": "3.3.1"
     }
 }

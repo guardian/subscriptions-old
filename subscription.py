@@ -119,6 +119,15 @@ class DigitalPackAU(SimpleTemplate):
     template_path = 'digital-pack.html'
 
 
+class Feedback(SimpleTemplate):
+    template_path = 'feedback.html'
+
+
+class FeedbackSent(SimpleTemplate):
+    context = {'sent': True}
+    template_path = 'feedback.html'
+
+
 class PackageForm(SimpleTemplate):
     template_path = 'choose-package.html'
 
@@ -149,6 +158,8 @@ class DeliveryPaper(PackageForm):
 
 
 app = webapp2.WSGIApplication([
+    ('/feedback/sent', FeedbackSent),
+    ('/feedback', Feedback),
     ('/us/digitalpack', DigitalPackUS),
     ('/us', SubscriptionsUS),
     ('/au/digitalpack', DigitalPackAU),
