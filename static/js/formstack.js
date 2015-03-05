@@ -78,6 +78,9 @@ var FormstackForm = function ($) {
             $(config.fsSelectors[selector], dom.$form).addClass(config.idClasses[selector]);
         }
 
+        // Replace submit input for button link
+        $(config.fsSelectors.submit, el).after('<button class="button button--large button--primary">Send feedback now</button>').remove();
+
         // Events
         $(dom.$form[0]).on('submit', self.submit);
     };
