@@ -6,6 +6,8 @@ import webapp2
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
+debug = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
+
 editions = {
     'uk': {
         'id': 'uk',
@@ -123,6 +125,15 @@ class DigitalPackNew(SimpleTemplate):
     template_path = 'digital-pack-new.html'
 
 
+class Feedback(SimpleTemplate):
+    template_path = 'feedback.html'
+
+
+class FeedbackSent(SimpleTemplate):
+    context = {'sent': True}
+    template_path = 'feedback.html'
+
+
 class PackageForm(SimpleTemplate):
     template_path = 'choose-package.html'
 
@@ -151,8 +162,9 @@ class DeliveryDigitalPaper(PackageForm):
 class DeliveryPaper(PackageForm):
     context = {'package': packages['delivery-paper']}
 
-
 app = webapp2.WSGIApplication([
+    ('/feedback/sent', FeedbackSent),
+    ('/feedback', Feedback),
     ('/us/digitalpack', DigitalPackUS),
     ('/us', SubscriptionsUS),
     ('/au/digitalpack', DigitalPackAU),
@@ -165,4 +177,4 @@ app = webapp2.WSGIApplication([
     ('/delivery/paper', DeliveryPaper),
     ('/', SubscriptionsUK),
     ('/(.*?)', SubscriptionsUK),
-], debug=True)
+], debug=debug)

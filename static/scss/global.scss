@@ -81,6 +81,18 @@ body {
     }
 }
 
+.footer-promo {
+    background-color: $c-neutral6;
+    border-top: 1px solid $c-neutral5;
+
+    > .gs-container {
+        background-color: $c-neutral7;
+        padding-top: $gs-baseline;
+        padding-bottom: $gs-baseline*2;
+    }
+}
+
+
 .page-header {
     padding-top: $gs-baseline/2;
 
@@ -142,4 +154,8 @@ body {
         background-color: transparent;
         border-color: $c-brand;
     }
+}
+
+.formstackForm {
+    max-width: gs-span(7);
 }

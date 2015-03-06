@@ -20,6 +20,8 @@
 }
 
 .package__select {
+    margin-top: $gs-baseline/4;
+    margin-left: $gs-gutter/4;
     position: absolute;
     top: $gs-baseline*1.25;
     left: $gs-gutter/2;
