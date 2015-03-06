@@ -4,7 +4,6 @@ body {
 }
 
 @include grid-system;
-@include gs-helpers;
 
 /* Update container */
 .gs-container {
