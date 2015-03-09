@@ -1,26 +1,42 @@
 
 /* Digital pack */
 .digital-cta {
-    text-align: center;
-    margin: $gs-baseline*2 0;
+    padding-top: $gs-baseline*2;
+    padding-bottom: $gs-baseline*3;
 
-    .button {
-        margin-top: $gs-baseline*2;
+    @include mq(tablet) {
+        padding-top: 0;
+        padding-bottom: $gs-baseline*4;
     }
 }
 
 .digital-cta__price {
-    @include font-size(24px, 28px);
+    @include font-size(21px, 27px);
+    text-align: center;
+
+    @include mq(tablet) {
+        text-align: right;
+    }
 }
 
 .digital-cta__amount {
-    @include font-size(42px, 46px);
+    font-size: 42px;
 }
 
-/* Dummy */
-.digital-dummy-image {
-    background: lightgray;
-    margin-bottom: $gs-baseline*2;
-    height: 65px;
-    width: 100px;
+.digital-cta__payment {
+    color: $c-neutral2;
+    text-align: center;
+
+    @include mq(tablet) {
+        text-align: right;
+    }
+}
+
+.digital-cta__button {
+    margin-top: 14px;
+    text-align: center;
+
+    @include mq(tablet) {
+        text-align: left;
+    }
 }
