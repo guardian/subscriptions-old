@@ -43,6 +43,12 @@
     padding-left: $gs-gutter;
 }
 
+.block__list--margin {
+    .block__list-item {
+        margin-bottom: $gs-baseline/2;
+    }
+}
+
 .block__list-item:before {
     background-color: $c-neutral3;
     border-radius: 12px;
