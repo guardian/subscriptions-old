@@ -5,7 +5,7 @@
     padding-bottom: $gs-baseline*3;
 
     @include mq(tablet) {
-        padding-top: 0;
+        padding-top: $gs-baseline;
         padding-bottom: $gs-baseline*4;
     }
 }
