@@ -13,6 +13,7 @@ $guss-row-fallback-width: 980px;
 }
 
 .global-header,
+.global-footer,
 .gs-container {
     min-width: $guss-row-fallback-width + $gs-gutter*2;
 }
